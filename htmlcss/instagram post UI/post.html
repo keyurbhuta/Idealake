@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Post UI</title>
+    <link rel="stylesheet" href="./post.css">
+</head>
+<body>
+    <div class="post">
+        <div class="post_header">
+            <div class="profile_info">
+                <div class="profile_img">
+                    <img src="./images/postimg.jpg" alt="hehe">
+                </div>
+                <span>janedoe</span>
+            </div>
+            <div class="options">
+                <span><ion-icon name="ellipsis-horizontal-outline"></ion-icon></span>
+            </div>
+        </div>
+        <div class="post_img">
+            <img src="./images/postimg.jpg" alt="hoho">
+        </div>
+        <div class="post_body">
+            <div class="post_actions">
+                <span class="heart_icon"><ion-icon name="heart-outline"></ion-icon></span>
+                <span class="chat_icon"><ion-icon name="chatbubble-outline"></ion-icon></span>
+                <span class="send_icon"><ion-icon name="paper-plane-outline"></ion-icon></span>
+                <span class="bookmark_icon"><ion-icon name="bookmark-outline"></ion-icon></span>
+            </div>
+            <div class="post_info">
+                175,701 likes
+            </div>
+            <div class="post_title">
+                <span class="username">janedoe</span>
+                <span class=title>Maldives</span>
+            </div>
+            <div class="post_comments">
+                <span>View all 734 omments</span>
+                <div class="comment">
+                    <span class="comment_username">johndow></span>
+                    <span class="comment_text">The most beautiful view</span>
+                    <span class="heart_icon"><ion-icon name="heart-outline"></ion-icon></span>
+                </div>
+            </div>
+            <div class="post_timestamp">
+                22 minutes ago
+            </div>
+        </div>
+        <div class="input_box">
+            <div class="emoji"><ion-icon name="happy-outline"></ion-icon></div>
+            <input type="text" placeholder="Add a comment..."/>
+        </div>
+    </div>
+    <script>
+        const heartButtons = document.querySelectorAll('.heart_icon')
+
+        heartButtons.forEach(function(iconButton){
+            iconButton.onclick=function(){
+                const isLiked=iconButton.childNodes[0].name==='heart'
+                iconButton.childNodes[0].name=isLiked?'heart-outline':'heart'
+                iconButton.className=isLiked
+                ? 'heart_icon':'heart_icon heart_icon_fill'
+            }
+        })
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

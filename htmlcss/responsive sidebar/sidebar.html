@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar menu|dark-light mode</title>
+    <link rel="stylesheet" href="sidebar.css"/>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <a href="#" class="image-text">
+                <span class="image">
+                    <img src="images/image.jfif" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="text name">CodingLab</span>
+                    <span class="text profession">Web Developer</span>
+                </div>
+            </a>
+            <span class="arrow-left"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                            <span class="icon"><ion-icon name="search-outline"></ion-icon></span>
+                            <input type="search" placeholder="Search...">
+                    </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="notifications-outline"></ion-icon></span>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+                            <span class="text nav-text">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="heart-outline"></ion-icon></span>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="icon"><ion-icon name="wallet-outline"></ion-icon></span>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <span class="icon"><ion-icon
+                            name="log-out-outline"></ion-icon></span>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <span class="icon-sun"><ion-icon name="sunny-outline"></ion-icon></span>
+                        <span class="icon-moon"><ion-icon name="moon-outline"></ion-icon></span>
+                    </div>
+                    <span class="text mode-text">Dark Mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+    <script src="sidebar.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Added quotes around font family */
+    font-size: 16px;
+    color: #333;
+    background: linear-gradient(45deg, #f802f5, #1c79e2);
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Take full viewport height */
+}
+
+.box {
+    background-color: #fff;
+    width: 100%; /* Changed fixed width to 100% for fluidity */
+    max-width: 1000px; /* Limit max width on large screens */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 27px 87px rgba(0, 0, 0, 0.37);
+    
+    display: flex;
+    flex-direction: row; /* Use flexbox row layout instead of float */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens to stack items */
+}
+
+.box-img {
+    flex: 1 1 45%; /* Flex grow, shrink and basis to take approx 45% */
+    min-width: 280px; /* Prevent shrinking too small */
+    max-width: 500px; /* Prevent growing too large */
+    text-align: center;
+    padding: 0 0;
+    height: 100%;
+    margin: 0;
+}
+
+/* Added max-width and responsive image sizing */
+.box-img img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 10px;
+}
+
+.box-text {
+    flex: 1 1 55%; /* Flex basis approx 55%, complements box-img */
+    min-width: 280px; /* Prevent shrinking too small on narrow screens */
+    padding: 40px 30px; /* Padding for spacing */
+}
+
+.box-text h1 {
+    font-size: 36px; /* Reduced from 48px for better scaling */
+    font-weight: bold;
+    color: #2e2e2e;
+    margin-bottom: 30px; /* Reduced bottom margin for tighter spacing */
+}
+
+.box-text p {
+    font-size: 16px; /* Increased from 14px for better readability */
+    font-weight: 300;
+    color: #2e2e2e;
+    line-height: 28px; /* Increased line-height for readability */
+    margin-bottom: 20px; /* More consistent spacing */
+}
+
+.box-text .social {
+    margin-top: 30px;
+    display: flex; /* Use flexbox for social icons */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    gap: 15px; /* Space between icons */
+}
+
+.box-text .social a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to left, #f802f5, #1c79e2);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 24px; /* Reduced from 28px for better scale */
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.5s ease;
+}
+
+.box-text .social a:hover {
+    transform: rotate(360deg);
+}
+
+/* Media query for tablets and small desktops */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .box-text h1 {
+        font-size: 28px; /* Smaller heading on tablets */
+    }
+
+    .box-text p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+
+    .box-text {
+        padding: 30px 20px; /* Less padding on smaller screens */
+    }
+
+    .box-text .social a {
+        width: 40px; /* Smaller social icons */
+        height: 40px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+}
+
+/* Media query for mobile phones */
+@media (max-width: 480px) {
+    .box-text h1 {
+        font-size: 22px; /* Even smaller headings */
+    }
+
+    .box-text p {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        padding: 20px 10px; /* Less padding on very small screens */
+    }
+}
