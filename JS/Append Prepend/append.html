@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append and Prepend</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>jQuery Append and Prepend Methods</h1>
+    <div class="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum <span>dolor sit amet </span>consectetur adipisicing elit. Amet, ad!</p>
+    </div>
+    <ol>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+        <li>List Item 4</li>
+    </ol>
+    <br>
+    <button id="appendBtn">Append</button>
+    <button id="prependBtn">Prepend</button>
+    <script>
+        $(document).ready(function(){
+            $("#appendBtn").click(function(){
+                $('ol').append("<li>List Item new")
+            })
+            $("#prependBtn").click(function(){
+                $('ol').prepend("<li>List Item new")
+            })
+        })
+    </script>
+</body>
+</html>
