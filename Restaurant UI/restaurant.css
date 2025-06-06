@@ -516,6 +516,13 @@ p .foodname{
     font-weight: 600;
 }
 
+.standouts h3 span{
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+}
+
 .info{
     display: flex;
     align-items: center;
@@ -539,6 +546,7 @@ p .foodname{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 200px
 }
 
 .reviews{
@@ -550,16 +558,35 @@ p .foodname{
 
 .leftimage{
     margin-left: 60px;
+    position: relative;
+}
+
+.leftimage img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+}
+
+.greenrect{
+    position:absolute;
+    border-radius: 140px 140px 41px 41px;
+    background: #53EC62;
+    width: 492px;
+    height: 362px;
+    bottom: 0%;
+    z-index: -1;
 }
 
 .customers{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 100px;
 }
 
 .customerpic{
     margin-right: 50px;
+    position: relative;
 }
 
 .feedback{
@@ -604,7 +631,25 @@ p .foodname{
 
 .customerpic img{
     border-radius: 50%;
+    border: solid white;
+    border-width: 5px;;
 }
+
+.review3 {
+    position: absolute;
+    z-index: 2;
+    left: 120%;
+}
+
+.review2 {
+    position: absolute;
+    top: 0%; /* Aligning it with review1 */
+    left: 60%;
+    z-index: 1 /* Positioned relative to review1 */
+}
+
+
+
 
 button{
     cursor: pointer;
@@ -686,7 +731,7 @@ button{
 
 /* --------------------------Footer---------------------------- */
 
-.footer{
+footer{
     background-color: transparent;
 }
 
@@ -694,7 +739,7 @@ button{
     display: flex;
     flex: wrap;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 100px;
 }
 
 .details p{
@@ -702,11 +747,63 @@ button{
 }
 
 .links,
-.mainmenu,
-.contactus{
+.mainmenu{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 31px;
+}
+
+.contactus{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 31px;
+}
+
+.foodicon{
+    display: flex;
+    align-items: center;
+    margin-bottom: 37px;
+}
+
+.foodicon .ff{
+    background-color:#39DB4A;
+    border-radius: 8px;
+    width: 34px;
+    height: 41px;
+    padding: 8.08px 7.19px 8.96px 8.36px;
+}
+
+.foodicon .ff img{
+    width: 18.448px;
+    height: 23.964px;
+}
+
+.details h6{
+    color: #000;
+
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+.details a{
+    color: #555;
+
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.foodi p{
+    width: 302px;
+    color: #555;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150.523%; /* 36.125px */
 }
 
 .last{
@@ -717,4 +814,7 @@ button{
 
 .socials{
     margin-right: 170px;
+    display: flex;
+    justify-content: center;
+    gap: 19px;
 }
