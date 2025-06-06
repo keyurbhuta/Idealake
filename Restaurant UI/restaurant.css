@@ -541,12 +541,11 @@ p .foodname{
     height: 276px;
 }
 
-
 .wrapper4{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 200px
+    margin-bottom: 200px;
 }
 
 .reviews{
@@ -559,12 +558,21 @@ p .foodname{
 .leftimage{
     margin-left: 60px;
     position: relative;
+    width: 506px;
+    height: 744px;
+    
+}
+
+.compliment{
+    position: absolute;
+    bottom: -25px;
+    right: 0%;
 }
 
 .leftimage img{
     z-index: 1;
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
 }
 
 .greenrect{
