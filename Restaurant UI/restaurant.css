@@ -1,0 +1,720 @@
+/* ---------- Reset ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color:#1e1e1e;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#1e1e1e;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FCFCFC 100%);
+}
+
+.container{
+    margin-left: 154px;
+    margin-right: 154px;
+}
+
+/* ---------- Header Layout ---------- */
+header nav {
+    margin: 47px 0 39px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------- Logo Section ---------- */
+.logo a {
+    display: flex;
+    align-items: center;
+    height: 41px;
+}
+
+.logo .f {
+    background-color: #39DB4A;
+    width: 34px;
+    height: 41px;
+    margin-right: 4.7px;
+    border-radius: 8px;
+    padding-top: 8.08px;
+    padding-left: 8.36px;
+}
+
+.logo .f img {
+    width: 18.45px;
+    height: 23.96px;
+}
+
+/* ---------- Mid Menu ---------- */
+.midmenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.midmenu a {
+    color: #272727;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.midmenu a.home {
+    color: #39DB4A;
+}
+
+.midmenu a:last-child {
+    margin-right: 0;
+}
+
+.midmenu i {
+    color: #39DB4A;
+    font-size: 12px;
+    margin-left: 6px;
+}
+
+/* ---------- Right Menu ---------- */
+.rightmenu {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search img {
+    width: 24px;
+    height: 24px;
+}
+
+.shop {
+    margin-right: 36px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.shop img {
+    width: 24px;
+    height: 24px;
+}
+
+.shop span {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #39DB4A;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ---------- Contact Button ---------- */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #39DB4A;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    width: 179px;
+    height: 60px;
+    padding: 0 32px;
+}
+
+.contact:hover{
+    color:#FFF;
+}
+
+.contact img {
+    width: 24px;
+    height: 24px;
+    margin-right: 14px;
+}
+
+
+/* Mid container */
+
+.wrapper{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    margin-bottom: 157px;
+    width: 100%
+}
+
+
+
+.lefttext{
+    margin-top: 196px;
+}
+
+.buttons1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 71px;
+}
+
+.order{
+    margin-right: 35px;
+    width: 229px;
+    height: 80px;
+    border-radius: 40px;
+    background: #39DB4A;
+    box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.50);
+    border: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.watch{
+    width: 269px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+.watch img{
+    height: 32px;
+    width: 32px;
+}
+
+.watch .watchimage{
+    width: 80px;
+    height: 80px;
+    background-color: #FFFFFF;
+    margin-left: 29px;
+    padding: 22px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.watch span{
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.lefttext h1{
+    width: 596px;
+    color: #000;
+    font-family: Inter;
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 145.523%; /* 90.224px */
+}
+
+.lefttext h4{
+    margin: 0;
+    width: 622px;
+    color: #4A4A4A;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 170.5%; /* 44.33px */
+    margin-right: 62.29;
+}
+
+/* Right text */
+
+.righttext .person{
+    width: 722.203px;
+    height: 797.316px;
+    z-index: -1;
+}
+
+.righttext{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fooditems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .noodles,
+.salad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 349px;
+    height: 132px;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+} */
+
+.stars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .noodleimg, .saladimg{
+    object-fit: contain;
+}
+
+
+.fooditems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.saladdetails,
+.noodledetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.fooditems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative; 
+}
+
+.noodles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 349px;
+    height: 132px;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+    position: absolute; 
+    bottom: -20px; 
+    left: calc(50% - 404.5px); /* Center align and offset for spacing */
+    z-index: 1; 
+    padding-right: 53px;
+}
+
+.salad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 349px;
+    height: 132px;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 7px 35px 51px 0px rgba(0, 0, 0, 0.14);
+    position: absolute; 
+    bottom: -20px; 
+    left: calc(50% + 55px); /* Add 55px spacing from noodles */
+    z-index: 1; 
+    padding-right: 53px;
+}
+
+.noodleimg, .saladimg {
+    /* width: 100%; 
+    height: auto; */
+    object-fit: contain;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+p .foodname{
+    padding: 0;
+    margin-bottom: 0;
+}
+.saladdetails, .noodledetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2; 
+}    
+
+.categories{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 38px;
+    margin-bottom: 272px;
+}
+
+.favourites{
+    margin-top: 33px;
+    text-align:center;
+    margin-bottom: 29px;
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+.wrapper2 h1{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 78px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.categories div{
+    width: 326px;
+    height: 326px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 2px 10px 30px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.categories img{
+    background-color: #C1F1C6;
+    border-radius: 50%;
+    width: 153px;
+    height: 153px;
+    object-fit: contain;
+}
+
+.wrapper2{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper3{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper3 h1{
+    width: 580px;
+    color: #000;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 131.523%; /* 78.914px */
+    margin-bottom: 63px;
+}
+
+.standouts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 241px;
+}
+
+.fattoush,
+.vegetable,
+.egg{
+    position: relative;
+    width: 446px;
+    height: 523px;
+    border-radius: 40px;
+    background: #FFF;
+    box-shadow: 2px 9px 42px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 46px;
+    
+}
+
+.fattoush::after
+{
+    content: url("images/filledheart.png");
+    text-align: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0%;
+    right: 0%;
+    width: 87px;
+    height: 75px; 
+    border-radius: 0px 37.5px 0px 42.5px;
+    background: #39DB4A;
+}
+
+.vegetable::after,
+.egg::after{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: url("images/emptyheart.png");
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 87px;
+    height: 75px; 
+    border-radius: 0px 37.5px 0px 42.5px;
+    background: #39DB4A;
+}
+
+.descriptiondiv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.standouts h3{
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.info .rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.standouts img{
+    width: 276px;
+    height: 276px;
+}
+
+
+.wrapper4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reviews{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.leftimage{
+    margin-left: 60px;
+}
+
+.customers{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.customerpic{
+    margin-right: 50px;
+}
+
+.feedback{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.reviews .testimonials{
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+.reviews h1{
+    width: 635px;
+    color: #000;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 131.023%; /* 78.614px */
+}
+
+.reviews .review{
+    width: 655px;
+    color: #555;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 159%; /* 41.34px */
+}
+
+.rating{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.customerpic img{
+    border-radius: 50%;
+}
+
+button{
+    cursor: pointer;
+}
+
+.wrapper5{
+    display: flex;
+    gap: 96px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 250px;
+}
+
+.cards{
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    gap:36px;
+}
+
+.card{
+    width: 277px;
+    height: 297.145px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 7px 12px 43px 0px rgba(0, 0, 0, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 45px 29px 38.15px 29px;
+    margin: 0;
+}
+
+.card p{
+    text-align: center;
+}
+
+.storyheading{
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+.story h1{
+    color: #000;
+    font-family: Inter;
+    font-size: 60px;
+    font-weight: 700;
+    width: 652px;
+    height: 146px;
+}
+
+.story .storydesc{
+    color: #555;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+}
+
+.explore{
+    width: 215px;
+    height: 80px;
+    border-radius: 40px;
+    background: #39DB4A;
+    box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.50);
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+    border: none;
+}
+
+/* --------------------------Footer---------------------------- */
+
+.footer{
+    background-color: transparent;
+}
+
+.details{
+    display: flex;
+    flex: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details p{
+    width: 302px;
+}
+
+.links,
+.mainmenu,
+.contactus{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.last{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.socials{
+    margin-right: 170px;
+}

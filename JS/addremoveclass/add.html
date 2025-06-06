@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body{font-family:arial}
+        #box{
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        .first{background:tan;}
+        .second{background:pink;}
+    </style>
+</head>
+<body>
+    <h1>jQuery Class Methods</h1>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, asperiores!</p>
+    </div>
+    <br>
+    <button id="addbutton">Add Class</button>
+    <button id="removebutton">Remove Class</button>
+    <button id="togglebutton">Toggle Class</button>
+    <script>
+        $('#addbutton').click(function(){
+            $('#box, h1').addClass("second");
+        });
+        $('#removebutton').click(function(){
+            $('#box, h1').removeClass("second");
+        });
+        $('#togglebutton').click(function(){
+            $('#box, h1').toggleClass("second");
+        });
+    </script>
+</body>
+</html>
