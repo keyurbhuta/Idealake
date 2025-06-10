@@ -124,13 +124,14 @@
             </section>
             <section>
                 <div class="wrapper3">
+                    <p class="specialdishes">SPECIAL DISHES</p>
                     <h1>Standout Dishes From Our Menu</h1>
                     <div class="standouts">
                         <div class="fattoush">
                             <img src="images/Fattoush.png" alt="">
                             <div class="descriptiondiv">
                                 <h3>Fattoush salad</h3></h2>
-                                <p class="itemdescription">Description of the item</p>
+                                <p>Description of the item</p>
                             </div>
                             <div class="info">
                                 <h3><span>$</span>24.00</h3>
@@ -215,22 +216,22 @@
                     <div class="cards">
                         <div class="card">
                             <img src="images/salademoji.png" alt="">
-                            <h7>CATERING</h7>
+                            <h6>CATERING</h6>
                             <P>Delight your guests with our flavors and  presentation</P>
                         </div>
                         <div class="card">
                             <img src="images/timeemoji.png" alt="">
-                            <h7>FAST DELIVERY</h7>
+                            <h6>FAST DELIVERY</h6>
                             <P>We deliver your order promptly to your door</P>
                         </div>
                         <div class="card">
                             <img src="images/cartemoji.png" alt="">
-                            <h7>ONLINE ORDERING</h7>
+                            <h6>ONLINE ORDERING</h6>
                             <P>Explore menu & order with ease using our Online Ordering </P>
                         </div>
                         <div class="card">
                             <img src="images/giftemoji.png" alt="">
-                            <h7>GIFT CARDS</h7>
+                            <h6>GIFT CARDS</h6>
                             <P>Give the gift of exceptional dining with Foodi Gift Cards</P>
                         </div>
                     </div>
@@ -246,25 +247,29 @@
                             </div>
                             <p>Savor the artistry where every dish is a culinary masterpiece</p>
                         </div>
-                        <div class="links">
-                            <h6>Useful links</h6>
-                            <a href="#">About us</a>
-                            <a href="#">Events</a>
-                            <a href="#">Blogs</a>
-                            <a href="#">FAQ</a>
-                        </div>
-                        <div class="mainmenu">
-                            <h6>Main menu</h6>
-                            <a href="#">Home</a>
-                            <a href="#">Offers</a>
-                            <a href="#">Menus</a>
-                            <a href="#">Reservation</a>
+                        <div class="middlefooter">
+                            <div class="links">
+                                <h6>Useful links</h6>
+                                <a href="#">About us</a>
+                                <a href="#">Events</a>
+                                <a href="#">Blogs</a>
+                                <a href="#">FAQ</a>
+                            </div>
+                            <div class="mainmenu">
+                                <h6>Main menu</h6>
+                                <a href="#">Home</a>
+                                <a href="#">Offers</a>
+                                <a href="#">Menus</a>
+                                <a href="#">Reservation</a>
+                            </div>
                         </div>
                         <div class="contactus">
                             <h6>Contact us</h6>
-                            <a href="mailto:example@email.com">example@email.com</a>
-                            <a href="tel:+64 958 248 966">+64 958 248 966</a>
-                            <a href="#">Social Media</a>
+                            <div class="telemail">
+                                <a href="mailto:example@email.com">example@email.com</a>
+                                <a href="tel:+64 958 248 966">+64 958 248 966</a>
+                                <a class="socialmedia" href="#">Social Media</a>
+                            </div>
                         </div>
                     </div>
                     <div class="last">
@@ -283,16 +288,34 @@
         </div>
         <script>
             const titleSection = document.querySelector('.reviews');
+            const expandingmenu=document.querySelector('.rightmenu');
 
+            expandablemenu.classList.add('expandablemenu');
+            expandablemenu.innerHTML=`
+            <div class=expand><i class="fa-solid fa-bars fa-rotate-by" style="color: #000000;"></i>
+                <div class="hidden">
+                    <a class="hiddenhome" href="#">Home</a>
+                    <a class="hiddenmenu" href="#">Menu <i class="fa-solid fa-chevron-down"></i></a>
+                    <a class="hiddenservices" href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    <a class="hiddenoffers" href="#">Offers</a>
+                </div>
+            </div>`
             // Create the new element once, but don't add it yet
             const newLeftImage = document.createElement('div');
-            newLeftImage.classList.add('newleftimage');
+            newLeftImage.classList.add('newLeftImage');
             newLeftImage.innerHTML = `
-                <img src="images/chef.png" alt=""/>
+                <div class=chefimg><img src="images/chef.png" alt=""/></div>
                 <div class="greenrect"></div>
                 <div class="compliment">Our Best Chef 😁</div>
                 <img src="images/yummy.png" alt="" class="yummy"/>
                 <img src="images/pizza.png" alt="" class="pizza"/>
+            `;
+            
+            const cardsection=document.querySelector('.cards');
+            const explorebutton=document.createElement('button');
+            explorebutton.classList.add('explorebutton');
+            explorebutton.innerHTML=`
+                <button class="explorebutton">Explore</button>
             `;
 
             function checkWidth() {
@@ -300,12 +323,23 @@
                     if (!titleSection.contains(newLeftImage)) {
                         titleSection.appendChild(newLeftImage);
                     }
+                    if(!cardsection.contains(explorebutton)){
+                        cardsection.appendChild(explorebutton);
+                    }
                 } else {
                     if (titleSection.contains(newLeftImage)) {
                         titleSection.removeChild(newLeftImage);
                     }
+                    if(cardsection.contains(explorebutton)){
+                        cardsection.removeChild(explorebutton);
+                    }
                 }
             }
+            // function checkWidth(){
+            //     if(window.innerWidth<830){
+            //         if(!expandablemenu.contains())
+            //     }
+            // }
 
             // Run on load
             checkWidth();

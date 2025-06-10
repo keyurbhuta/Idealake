@@ -11,6 +11,7 @@
 a {
     text-decoration: none;
     color:#1e1e1e;
+    width: 100%;
 }
 
 a:hover{
@@ -181,7 +182,12 @@ header nav {
     width: 100%
 }
 
-
+.lefttext h1 span{
+    color: #39DB4A;
+    font-family: Inter;
+    font-weight: 800;
+    line-height: 145.523%;
+}
 
 .lefttext{
     margin-top: 196px;
@@ -224,7 +230,7 @@ header nav {
     width: 32px;
 }
 
-.watch .watchimage{
+.watchimage{
     width: 80px;
     height: 80px;
     background-color: #FFFFFF;
@@ -295,12 +301,12 @@ header nav {
     font-size: 20px;
     font-weight: 600;
     background-color: #fbfbfb;
-    border-radius: 16px;
+    border-radius: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: -32.3px;
+    left: 20px;
     top: 187px;
     width: 200px;
     height: 55px;
@@ -365,7 +371,7 @@ header nav {
 
 .noodles {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: 349px;
     height: 132px;
@@ -376,12 +382,12 @@ header nav {
     bottom: -20px; 
     left: calc(50% - 404.5px); /* Center align and offset for spacing */
     z-index: 1; 
-    padding-right: 53px;
+    padding: 15px;
 }
 
 .salad {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     width: 349px;
     height: 132px;
@@ -392,7 +398,7 @@ header nav {
     bottom: -20px; 
     left: calc(50% + 55px); /* Add 55px spacing from noodles */
     z-index: 1; 
-    padding-right: 53px;
+    padding: 15px;
 }
 
 .noodleimg, .saladimg {
@@ -401,6 +407,7 @@ header nav {
     object-fit: contain;
     z-index: 0;
     border-radius: 8px;
+    margin-right: 20px;
 }
 
 p .foodname{
@@ -411,8 +418,7 @@ p .foodname{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-around;
     z-index: 2; 
 }    
 
@@ -468,6 +474,10 @@ p .foodname{
     justify-content: center;
 }
 
+.categories p{
+    margin-top: 13px;
+}
+
 .categories img{
     background-color: #C1F1C6;
     border-radius: 50%;
@@ -485,7 +495,7 @@ p .foodname{
 .wrapper3{
     display: flex;
     flex-direction: column;
-
+    align-items:center;
 }
 
 .wrapper3 h1{
@@ -532,6 +542,7 @@ p .foodname{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 4px;
     top: 0%;
     right: 0%;
     width: 87px;
@@ -549,6 +560,7 @@ p .foodname{
     position: absolute;
     top: 0%;
     right: 0%;
+    padding-top: 4px;
     width: 87px;
     height: 75px; 
     border-radius: 0px 37.5px 0px 42.5px;
@@ -591,7 +603,7 @@ p .foodname{
 
 .standouts img{
     width: 276px;
-    height: 276px;
+    height: auto;
 }
     
 
@@ -620,8 +632,8 @@ p .foodname{
 .newleftimage{
     margin-left: 60px;
     position: relative;
-    width: 506px;
     height: 744px;
+    width: 506px;
     order: 3;
 }
 
@@ -666,7 +678,7 @@ p .foodname{
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 40px solid #fff;
-    border-top-left-radius: 20px;
+    /* border-top-right-radius: 20px; */
     top: -20px;
     left: 0;
 
@@ -711,6 +723,7 @@ p .foodname{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
     gap: 100px;
 }
 
@@ -745,7 +758,8 @@ p .foodname{
 }
 
 .reviews .review{
-    width: 655px;
+    width: 100%;
+    justify-content: center;
     color: #555;
     font-family: Inter;
     font-size: 26px;
@@ -753,7 +767,7 @@ p .foodname{
     line-height: 159%; /* 41.34px */
 }
 
-.rating{
+.feedback .rating{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -811,15 +825,30 @@ button{
     box-shadow: 7px 12px 43px 0px rgba(0, 0, 0, 0.14);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: first baseline;
     flex-direction: column;
     padding: 45px 29px 38.15px 29px;
     margin: 0;
 }
 
 .card p{
+    color: #90BD95;
     text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
 }
+
+.card h6{
+    color: #5FE26C;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 
 .story{
     display: flex;
@@ -843,7 +872,6 @@ button{
     font-size: 60px;
     font-weight: 700;
     width: 652px;
-    height: 146px;
 }
 
 .story .storydesc{
@@ -873,12 +901,25 @@ footer{
     background-color: transparent;
 }
 
+.telemail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .details{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr) ;
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 100px;
-    gap: 187px;
+}
+
+.middlefooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 2;
 }
 
 .details p{
@@ -892,6 +933,23 @@ footer{
     justify-content: center;
     gap: 31px;
 }
+
+.foodi{
+    flex: 1;
+}
+
+.contactus{
+    flex: 1;
+}
+
+.mainmenu{
+    margin-right: 100px;
+}
+/* .foodi,
+.middlefooter,
+.contactus{
+    width: 100%
+} */
 
 .contactus{
     display: flex;
@@ -987,12 +1045,26 @@ footer{
 .socials i{
     background-color: #EDFFEF;
     font-size: 25px;
+    color: black;
     height: 57px;
     width: 58px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.wrapper3 .specialdishes{
+    margin-top: 33px;
+    text-align:center;
+    margin-bottom: 29px;
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
 }
 
 
@@ -1016,8 +1088,15 @@ footer{
         justify-content: flex-start;
     }
 
+    .wrapper h1,
+    .wrapper h4,
+    .buttons1{
+        width: 100%;
+        justify-content: space-around;
+    }
+
     .lefttext{
-        width: 80%;
+        width: 100%;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -1034,6 +1113,21 @@ footer{
         margin-right: auto;
     }
 
+    .wrapper2 h1,
+    .wrapper2 p{
+        width: 100%;
+    }
+
+    .favourites{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .categories p{
+        display: flex;
+        justify-content: center;
+        
+    }
     .standouts{
         flex-wrap: wrap;
         margin-left: auto;
@@ -1052,18 +1146,67 @@ footer{
         margin-bottom: 40px;
     }
 
+    .reviews{
+        width: 100%;
+        align-items: center;
+    }
+
+    .reviews .review,
+    .reviews .testimonials,
+    .reviews h1{
+        width: 100%;
+    }
+
     .wrapper5{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
     .story{
         justify-content: center;
         align-items: center;
-        width: 652px;
+    }
+
+    .story p,
+    .story h1{
+        width: 100%;
+
+    }
+
+    .mainmenu{
+        margin-right: 0;
     }
     
     
+
+    .wrapper3 h1{
+        width: 100%;
+    }
+    .specialdishes{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .explorebutton{
+        border-radius: 40px;
+        background: #39DB4A;
+        box-shadow: -2px 22px 38px 0px rgba(142, 255, 154, 0.50);
+        color: #FFF;
+        font-family: Inter;
+        font-size: 26px;
+        font-weight: 600;
+        border: none;
+        width: 100%;
+        height: 48px;
+        grid-column: 1/-1;
+    }
+
+    .explore{
+        display: none;
+    }
+
+
 
 }
 
@@ -1110,3 +1253,381 @@ footer{
         height: 164px;
     }    
 } */
+
+@media  screen and (max-width: 838px) and (min-width: 300px) {
+    .lefttext h1{
+        font-size: 24px;
+    }
+    .lefttext h4{
+        font-size: 14px;
+    }
+
+    
+    .order{
+        margin-right: 16.56px;
+        width: 164.436px;
+        height: 48px;
+        font-size: 16px;
+    }
+    .watchimage{
+        width: 48px;
+        height: 48px;
+    }
+    .watch{
+        font-size: 14px;
+        width: 145px;
+        height: 48px;
+    }
+    .watch span{
+        font-size: 14px;
+    }
+    .righttext .person{
+        width: 336.809px;
+        height: 330.588px;
+        margin-top: 196px;
+    }
+    .watchimage img{
+        width: 20px;
+        height: auto;
+    }
+    .hotspicyfood{
+        width: 146px;
+        height: 39.444px;
+        font-size: 11.774px;
+        left: -20px;
+        filter: drop-shadow(15.306px 12.952px 30.024px rgba(0, 0, 0, 0.14));
+    }
+
+    .fooditems{
+        flex-direction: column;
+    }
+
+    .noodles{
+        position: relative;
+        left: 0%;
+        margin-top: 19px;
+        width: 328px;
+        height: 92px;
+        padding: 10px;
+    }
+    .salad{
+        position: relative;
+        left: 0%;
+        margin-top: 8px;
+        width: 328px;
+        height: 92px;
+        padding: 10px;
+    }
+    .foodname{
+        font-size: 18px;
+    }
+    .noodleimg, .saladimg{
+        overflow: hidden;
+    }
+    .categories div{
+        width: 156px;
+        height: 164px;
+    }
+    .categories img{
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+    }
+    .categories .categoryname{
+        font-size: 16px;
+        margin: 0;
+    }
+    .categories .number{
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .categories{
+        margin-bottom: 40px;
+        gap: 12px;
+    }
+    .wrapper2 h1{
+        font-size: 24px;
+        margin: 0 0 12px 0
+    }
+    .favourites{
+        font-size: 16px;
+        margin: 0 0 12px 0;
+    }
+
+    .specialdishes{
+        font-size: 16px;
+        margin: 0 0 12px 0;
+    }
+    .wrapper3 h1{
+        font-size: 24px;
+        margin: 0 0 12px 0
+    }
+    .fattoush,
+    .vegetable,
+    .egg{
+        width: 156px;
+        height: 207px;
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    .vegetable::after,
+    .egg::after,
+    .fattoush::after{
+        width: 35px;
+        height: 32px;
+        border-radius: 0px 16px;
+    }
+    .descriptiondiv h3{
+        font-size: 14px;
+    }
+    .wrapper5{
+        margin-bottom: 40px;
+    }
+    .descriptiondiv p{
+        font-size: 12px;
+    }
+    .info h3 span{
+        font-size: 12.481px;
+    }
+    .info h3{
+        font-size: 16.642px;
+    }
+    .standouts{
+        gap: 16px;
+        margin: 0;
+    }
+    .standouts img{
+        width: 120px;
+        height: auto;
+    }
+    .standouts h3{
+        margin: 0;
+    }
+    .feedback .rating p{
+        font-size: 14px;
+    }
+    
+    .rating{
+        justify-content: flex-end;
+        gap: 1px;
+    }
+    .wrapper3{
+        margin-bottom: 41px;
+    }
+    .testimonials{
+        font-size: 16px;
+    }
+    .reviews h1{
+        font-size: 24px;
+    }
+    .reviews{
+        gap: 12px;
+    }
+    .newleftimage .chefimg img{
+        width: 205.535px;
+        height: 290.656px;
+        object-fit: contain;
+    }
+    .newleftimage .greenrect{
+        width: 199.849px;
+        height: 141.421px; 
+    } 
+    .newleftimage{
+        width: 206px;
+        height: 291px;
+        margin-bottom: 12px;
+    }
+    .compliment{
+        width: 93.425px;
+        height: 30.863px;
+        font-size: 8.027px;
+    }
+    .compliment::before{
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 20px solid #fff;
+        top: -30%
+    }
+
+    .yummy{
+        top: 180.39px;
+        width: 18.159px;
+        height: 17.582px;
+        left: 10px;
+    }
+
+    .pizza{
+        top: 180.39px;
+        width: 18.159px;
+        height: 17.582px;
+        right: 10px;
+    }
+    .greenrect{
+        left: 3%;
+    }
+    .reviews .review{
+        font-size: 14px;
+    }
+    .feedback h4{
+        margin: 0;
+        font-size: 14px;
+    }
+    .feedback p numofreview{
+        font-size: 14px;
+    }
+    .customerpic img{
+        width: 60px;
+    }
+    .feedback h4{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .story .storyheading{
+        font-size: 16px;
+    }
+    .story h1{
+        font-size: 24px;
+    }
+
+    .story .storydesc{
+        font-size: 14px;
+    }
+
+    .card{
+        width: 154px;
+        height: auto;
+        /* height: 164px; */
+        padding: 24px 16px 23px 16px;
+    }
+    .cards{
+        gap: 14px;
+    }
+    .card h6{
+        color: #5FE26C;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 8px;
+    }
+    .card img{
+        width: 32px;
+        height: 31.907px;
+    }
+    .card p{
+        color: #90BD95;
+        text-align: center;
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .explorebutton{
+        font-size: 16px;
+    }
+    .details{
+        flex-direction: column;
+        gap: 24px;
+        width: 100%
+    }
+    .details p{
+        width: 460px;
+    }
+
+    .contactus{
+        width: 460px;
+    }
+
+    .socialmedia{
+        display: none;
+    }
+
+    .telemail{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .last{
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .socials{
+        width: 460px;
+        margin: 0;
+        justify-content: start;
+    }
+    .middlefooter{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .foodi p{
+        width: 100%;
+    }
+    .contactus{
+        width: 100%;
+    }
+    .contactus .telemail{
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .contactus .telemail a{
+        width: auto;
+    }
+    .socials{
+        width: auto;
+        justify-content: center;
+    }
+    .story{
+        gap: 12px;
+    }
+    .foodicon{
+        width: 66px;
+        height: 25.011px;
+    }
+    .foodi p{
+        font-size: 14px;
+    }
+    .foodicon img{
+        height: 25.011px;
+        width: auto;
+    }
+    .details h6{
+        font-size: 16px;
+    }
+    .details a{
+        font-size: 14px;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .copyright img{
+        height: 12px;
+    }
+
+    .info .rating p{
+        font-size: 14px;
+    }
+    .info .rating i{
+        width: 14px;
+        margin-right : 5px;
+    }
+    .lefttext{
+        margin: 0;
+    }
+
+    .midmenu{
+        display: none;
+    }
+    .contact{
+        display: none;
+    }
+    .hidden{
+        display: none;
+    }
+}
