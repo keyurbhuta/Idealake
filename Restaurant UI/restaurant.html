@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="restaurant.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body> 
     <!-- fix container wrapper stuff -->
@@ -58,6 +60,7 @@
                         </div>
                         <div class="righttext">
                             <img class="person" src="images/person.png" alt="">
+                            <div class="hotspicyfood">Hot spicy Food 🌶</div>
                             <div class="fooditems">
                                 <div class="noodles">
                                     <img class="noodleimg"src="images/noodles.png" alt="">
@@ -104,17 +107,17 @@
                         <div class="breakfast">
                             <img src="images/breakfast.png" alt="">
                             <p class="categoryname">Breakfast</p>
-                            <p class="number">(12 dishes)</p>
+                            <p class="number">(12 breakfast)</p>
                         </div>
                         <div class="dessert">
                             <img src="images/dessert.png" alt="">
                             <p class="categoryname">Dessert</p>
-                            <p class="number">(48 dishes)</p>
+                            <p class="number">(48 dessert)</p>
                         </div>
                         <div class="browseall">
                             <img src="images/browseall.png" alt="">
                             <p class="categoryname">Browse All</p>
-                            <p class="number">(255 dishes)</p>
+                            <p class="number">(255 Items)</p>
                         </div>
                     </div>
                 </div>
@@ -172,11 +175,12 @@
                 <div class="wrapper4">
                     <div class="leftimage">
                         <img src="images/chef.png" alt="">
-                        <div class="greenrect">
-                        </div>
+                        <div class="greenrect"></div>
                         <div class="compliment">
-                            <p>Our Best Chef 😁</p>
+                            Our Best Chef 😁
                         </div>
+                        <img src="images/yummy.png" alt="" class="yummy">
+                        <img src="images/pizza.png" alt="" class="pizza">
                     </div>
                     <div class="reviews">
                         <p class="testimonials">TESTIMONIALS</p>
@@ -260,22 +264,55 @@
                             <h6>Contact us</h6>
                             <a href="mailto:example@email.com">example@email.com</a>
                             <a href="tel:+64 958 248 966">+64 958 248 966</a>
-                            <a>Social Media</a>
+                            <a href="#">Social Media</a>
                         </div>
                     </div>
                     <div class="last">
                         <div class="socials">
-                            <a href="#"><img src="images/facebook.png" alt=""></a>
-                            <a href="#"><img src="images/instagram.png" alt=""></a>
-                            <a href="#"><img src="images/twitter.png" alt=""></a>
-                            <a href="#"><img src="images/youtube.png" alt=""></a>
+                            <a href="#"><i class='bx bxl-facebook'></i></a>
+                            <a href="#"><i class='bx bxl-instagram'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                            <a href="#"><i class='bx bxl-youtube'></i></a>
                         </div>
                         <div class="copyright">
-                            <p>Copyright <img src="images/copyright.png" alt=""> 2023 Dscode | All rights reserved</p>
+                            Copyright <img src="images/copyright.png" alt=""> 2023 Dscode | All rights reserved
                         </div>
                     </div>
                 </footer>
             </section>
         </div>
+        <script>
+            const titleSection = document.querySelector('.reviews');
+
+            // Create the new element once, but don't add it yet
+            const newLeftImage = document.createElement('div');
+            newLeftImage.classList.add('newleftimage');
+            newLeftImage.innerHTML = `
+                <img src="images/chef.png" alt=""/>
+                <div class="greenrect"></div>
+                <div class="compliment">Our Best Chef 😁</div>
+                <img src="images/yummy.png" alt="" class="yummy"/>
+                <img src="images/pizza.png" alt="" class="pizza"/>
+            `;
+
+            function checkWidth() {
+                if(window.innerWidth < 1490){
+                    if (!titleSection.contains(newLeftImage)) {
+                        titleSection.appendChild(newLeftImage);
+                    }
+                } else {
+                    if (titleSection.contains(newLeftImage)) {
+                        titleSection.removeChild(newLeftImage);
+                    }
+                }
+            }
+
+            // Run on load
+            checkWidth();
+
+            // Also listen to window resize
+            window.addEventListener('resize', checkWidth);
+
+        </script>
 </body>
 </html>

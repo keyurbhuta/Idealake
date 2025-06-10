@@ -28,6 +28,16 @@ body {
     margin-right: 154px;
 }
 
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
 /* ---------- Header Layout ---------- */
 header nav {
     margin: 47px 0 39px 0;
@@ -258,9 +268,11 @@ header nav {
 /* Right text */
 
 .righttext .person{
-    width: 722.203px;
-    height: 797.316px;
+    width: 827.56px;
+    height: 812.275px;
     z-index: -1;
+    
+    object-fit: contain;
 }
 
 .righttext{
@@ -268,6 +280,7 @@ header nav {
     flex-direction:column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .fooditems{
@@ -276,6 +289,34 @@ header nav {
     align-items: center;
 }
 
+.hotspicyfood{
+    color: #FF6868;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fbfbfb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -32.3px;
+    top: 187px;
+    width: 200px;
+    height: 55px;
+    filter: drop-shadow(26px 22px 51px rgba(0, 0, 0, 0.14));
+    text-decoration: none;
+}
+
+.hotspicyfood::after{
+    position: absolute;
+    content: "";
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 30px solid #fff;
+    bottom: -15px;
+    right: 0;
+}
 /* .noodles,
 .salad{
     display: flex;
@@ -313,6 +354,7 @@ header nav {
     align-items: center;
     justify-content: center;
 } */
+
 
 .fooditems {
     display: flex;
@@ -374,12 +416,23 @@ p .foodname{
     z-index: 2; 
 }    
 
-.categories{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
     gap: 38px;
     margin-bottom: 272px;
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+
+.maindish,
+.breakfast,
+.dessert,
+.browseall{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
 }
 
 .favourites{
@@ -395,11 +448,9 @@ p .foodname{
 }
 
 .wrapper2 h1{
-    text-align: center;
     margin-top: 0;
     margin-bottom: 78px;
     color: #000;
-    text-align: center;
     font-family: Inter;
     font-size: 60px;
     font-weight: 700;
@@ -428,6 +479,7 @@ p .foodname{
 .wrapper2{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .wrapper3{
@@ -468,6 +520,7 @@ p .foodname{
     align-items: center;
     justify-content: center;
     padding: 46px;
+    flex-shrink: 0;
     
 }
 
@@ -540,19 +593,21 @@ p .foodname{
     width: 276px;
     height: 276px;
 }
+    
 
 .wrapper4{
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 200px;
+    margin-bottom: 260px;
 }
+
 
 .reviews{
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 53px;
 }
 
 .leftimage{
@@ -560,17 +615,84 @@ p .foodname{
     position: relative;
     width: 506px;
     height: 744px;
-    
+}
+
+.newleftimage{
+    margin-left: 60px;
+    position: relative;
+    width: 506px;
+    height: 744px;
+    order: 3;
+}
+
+.reviews .testimonials{
+    order: 1;
+}
+
+.reviews h1{
+    order: 2;
+}
+
+.reviews .review{
+    order: 4;
+}
+
+.reviews .customers{
+    order: 5;
 }
 
 .compliment{
     position: absolute;
     bottom: -25px;
-    right: 0%;
+    right: -10%;
+    background-color: #fff;
+    color: #202020;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    width: 230px;
+    height: 55px;
+    z-index: 2;
+    filter: drop-shadow(7px 14px 43px rgba(0, 0, 0, 0.14));
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.leftimage img{
-    z-index: 1;
+.compliment::before{
+    position: absolute;
+    content: "";
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 40px solid #fff;
+    border-top-left-radius: 20px;
+    top: -20px;
+    left: 0;
+
+}
+
+.compliment p{
+    padding: 0;
+}
+
+.yummy{
+    position: absolute;
+    top: 462px;
+    left: -27px;
+    z-index: -1;
+}
+
+.pizza{
+    right: -27px;
+    top: 462px;
+    z-index: -1;
+    position: absolute;
+}
+
+.leftimage img,
+.newleftimage img{
+    z-index: 2;
     position: absolute;
     bottom: 0%;
 }
@@ -579,10 +701,10 @@ p .foodname{
     position:absolute;
     border-radius: 140px 140px 41px 41px;
     background: #53EC62;
-    width: 492px;
+    width: 100%;
     height: 362px;
     bottom: 0%;
-    z-index: -1;
+    z-index: 1;
 }
 
 .customers{
@@ -591,6 +713,7 @@ p .foodname{
     justify-content: flex-start;
     gap: 100px;
 }
+
 
 .customerpic{
     margin-right: 50px;
@@ -698,6 +821,13 @@ button{
     text-align: center;
 }
 
+.story{
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+    
+}
+
 .storyheading{
     color: #FF6868;
     font-family: Inter;
@@ -744,10 +874,11 @@ footer{
 }
 
 .details{
-    display: flex;
-    flex: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
     justify-content: space-between;
     margin-bottom: 100px;
+    gap: 187px;
 }
 
 .details p{
@@ -818,6 +949,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: start;
+    margin-bottom: 59px;
 }
 
 .socials{
@@ -826,3 +958,155 @@ footer{
     justify-content: center;
     gap: 19px;
 }
+
+.copyright{
+    color: #555;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.last a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58px;
+    height: 57px;
+}
+
+.last .socials i:hover{
+    background-color: #39DB4A;
+    color: white;
+}
+
+.socials img{
+    width: 58px;
+    height: 57px;
+}
+
+.socials i{
+    background-color: #EDFFEF;
+    font-size: 25px;
+    height: 57px;
+    width: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1676px) {
+    .container{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 1490px){
+    .leftimage{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1490px){
+    .wrapper{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .lefttext{
+        width: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .lefttext h1,
+    .lefttext h4{
+        width: 100%;
+    }
+    
+
+    .categories{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .standouts{
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leftimage{
+        display: none;
+    }
+    
+    .wrapper4{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .wrapper5{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .story{
+        justify-content: center;
+        align-items: center;
+        width: 652px;
+    }
+    
+    
+
+}
+
+/* @media screen and (max-width: 1490px){
+    .righttext .person{
+        width: 336.809px;
+        height: 330.588px;
+        margin-top: 196px;
+    }
+    .wrapper{
+        justify-content: flex-start;
+        margin-right: 40px;
+        gap: 70px;
+    }
+
+    .buttons1{
+        margin: 0;
+    }
+
+    .lefttext h4{
+        font-size: 14px;
+        width: 60%;
+        margin-bottom: 18px;
+    }
+    .lefttext h1{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .order{
+        width: 164.436px;
+        height: 48px;
+    }
+    .watch{
+        width: 145px;
+        height: 48px;
+    }
+
+    .maindish,
+    .breakfast,
+    .dessert,
+    .browseall{
+        width: 156px;
+        height: 164px;
+    }    
+} */
