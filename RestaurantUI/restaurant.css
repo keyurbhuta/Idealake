@@ -22,6 +22,7 @@ a:hover{
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #FAFAFA 0%, #FCFCFC 100%);
+    /* overflow: hidden; */
 }
 
 .container{
@@ -35,6 +36,11 @@ p{
 }
 
 h1{
+    margin: 0;
+    padding: 0;
+}
+
+h6{
     margin: 0;
     padding: 0;
 }
@@ -54,7 +60,7 @@ header nav {
     height: 41px;
 }
 
-.logo .f {
+/* .logo .f {
     background-color: #39DB4A;
     width: 34px;
     height: 41px;
@@ -67,7 +73,7 @@ header nav {
 .logo .f img {
     width: 18.45px;
     height: 23.96px;
-}
+} */
 
 /* ---------- Mid Menu ---------- */
 .midmenu {
@@ -103,6 +109,21 @@ header nav {
 .rightmenu {
     display: flex;
     align-items: center;
+}
+
+.sidemenu{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    background: white;
+}
+
+.sidemenu.active{
+    display: flex;
 }
 
 .search {
@@ -213,6 +234,10 @@ header nav {
     font-size: 26px;
     font-weight: 600;
 }
+.order:hover{
+
+    background:#65e772
+}
 
 .watch{
     width: 269px;
@@ -223,6 +248,10 @@ header nav {
     align-items: center;
     border: none;
     background-color: transparent;
+    border-radius: 40px;
+}
+.watch:hover{
+    background:#f3f0f0;
 }
 
 .watch img{
@@ -241,8 +270,8 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 
 .watch span{
     color: #4D4D4D;
@@ -341,6 +370,28 @@ header nav {
     justify-content: center;
 }
 
+.stars i{
+    width: 16px;
+    height: auto;
+    margin-right: 7px
+}
+
+.noodleprice,
+.saladprice{
+    color: #515151;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.noodleprice span,
+.saladprice span{
+    color: #FF7979;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 /* .noodleimg, .saladimg{
     object-fit: contain;
 }
@@ -383,6 +434,12 @@ header nav {
     left: calc(50% - 404.5px); /* Center align and offset for spacing */
     z-index: 1; 
     padding: 15px;
+    transition: 0.2s ease-in-out ;
+}
+
+.noodles:hover,
+.salad:hover{
+    transform:translateY(-20px) ;
 }
 
 .salad {
@@ -399,6 +456,7 @@ header nav {
     left: calc(50% + 55px); /* Add 55px spacing from noodles */
     z-index: 1; 
     padding: 15px;
+    transition: 0.2s;
 }
 
 .noodleimg, .saladimg {
@@ -410,17 +468,25 @@ header nav {
     margin-right: 20px;
 }
 
-p .foodname{
+.noodledetails {
     padding: 0;
     margin-bottom: 0;
 }
-.saladdetails, .noodledetails {
+.saladdetails, .noodledetails{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    z-index: 2; 
+    z-index: 2;
 }    
+
+.food-name{
+    color: #2C2C2C;
+    font-family: Inter;
+    font-size: 18px;               
+    font-weight: 600;   
+}
+
 
 .categories {
     display: grid;
@@ -439,6 +505,14 @@ p .foodname{
     width: 326px;
     height: 326px;
     flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.maindish:hover,
+.breakfast:hover,
+.dessert:hover,
+.browseall:hover{
+    transform: translateY(-10px);
 }
 
 .favourites{
@@ -531,7 +605,13 @@ p .foodname{
     justify-content: center;
     padding: 46px;
     flex-shrink: 0;
-    
+    transition: 0.2s;
+}
+
+.fattoush:hover,
+.vegetable:hover,
+.egg:hover{
+    transform:scale(1.1);
 }
 
 .fattoush::after
@@ -550,6 +630,7 @@ p .foodname{
     border-radius: 0px 37.5px 0px 42.5px;
     background: #39DB4A;
 }
+
 
 .vegetable::after,
 .egg::after{
@@ -620,7 +701,26 @@ p .foodname{
     flex-direction: column;
     justify-content: center;
     gap: 53px;
+
 }
+    .reviews .newLeftImage {
+        position: relative;
+    }
+
+    .reviews .chefimg img{
+        position: relative;
+        z-index: 2;
+    }
+
+/* .reviews .leftimage .chefimg img{
+    position: relative;
+    z-index: 2;
+}
+
+.reviews .leftimage .chefimg{
+    z-index: 2;
+    position: relative;
+} */
 
 .leftimage{
     margin-left: 60px;
@@ -629,29 +729,15 @@ p .foodname{
     height: 744px;
 }
 
-.newleftimage{
+/* .reviews .newleftimage{
     margin-left: 60px;
-    position: relative;
+    position: relative ;
     height: 744px;
     width: 506px;
     order: 3;
-}
+} */
 
-.reviews .testimonials{
-    order: 1;
-}
 
-.reviews h1{
-    order: 2;
-}
-
-.reviews .review{
-    order: 4;
-}
-
-.reviews .customers{
-    order: 5;
-}
 
 .compliment{
     position: absolute;
@@ -702,12 +788,7 @@ p .foodname{
     position: absolute;
 }
 
-.leftimage img,
-.newleftimage img{
-    z-index: 2;
-    position: absolute;
-    bottom: 0%;
-}
+
 
 .greenrect{
     position:absolute;
@@ -716,8 +797,10 @@ p .foodname{
     width: 100%;
     height: 362px;
     bottom: 0%;
-    z-index: 1;
+    z-index: 0;
 }
+
+
 
 .customers{
     display: flex;
@@ -771,7 +854,7 @@ p .foodname{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 15px;
+    gap: 6px;
 }
 
 .customerpic img{
@@ -813,8 +896,8 @@ button{
     display: grid;
     
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 1fr;
     gap:36px;
+    margin-bottom: 56px;
 }
 
 .card{
@@ -829,6 +912,37 @@ button{
     flex-direction: column;
     padding: 45px 29px 38.15px 29px;
     margin: 0;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background-color: transparent;
+}
+
+.card::after{
+    content:'';
+    position: absolute;
+    background-color:#39DB4A;
+    opacity: 0.5;
+    height: 18px;
+    overflow: hidden;
+    transform: rotate(-50deg);
+    top: 150%;
+    left: -200px;
+    width: 120%;
+    transition: all 0.6s ease-in-out;
+    /* display: none; */
+    filter: blue(30px)
+}
+
+.card:hover::after{
+    width: 225%;
+    top: -100%;
+    right: -200px;
 }
 
 .card p{
@@ -964,22 +1078,8 @@ footer{
     margin-bottom: 37px;
 }
 
-.foodicon .ff{
-    background-color:#39DB4A;
-    border-radius: 8px;
-    width: 34px;
-    height: 41px;
-    padding: 8.08px 7.19px 8.96px 8.36px;
-}
-
-.foodicon .ff img{
-    width: 18.448px;
-    height: 23.964px;
-}
-
 .details h6{
     color: #000;
-
     font-family: Inter;
     font-size: 26px;
     font-weight: 600;
@@ -988,7 +1088,6 @@ footer{
 }
 .details a{
     color: #555;
-
     font-family: Inter;
     font-size: 24px;
     font-weight: 500;
@@ -1054,6 +1153,11 @@ footer{
     justify-content: center;
 }
 
+.reviews .chefimg img{
+    position: relative;
+    z-index: 2;     
+}
+
 
 .wrapper3 .specialdishes{
     margin-top: 33px;
@@ -1067,6 +1171,19 @@ footer{
     text-transform: uppercase;
 }
 
+.hidden{
+    border:none;
+    outline: none;
+    height: 24px;
+    width: 24px;
+}
+
+.feedback h4{
+    color: #000;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 600;
+}
 
 @media screen and (max-width: 1676px) {
     .container{
@@ -1087,6 +1204,9 @@ footer{
         align-items: center;
         justify-content: flex-start;
     }
+    .righttext.person{
+        margin-top: 40px;
+    }
 
     .wrapper h1,
     .wrapper h4,
@@ -1094,6 +1214,7 @@ footer{
         width: 100%;
         justify-content: space-around;
     }
+
 
     .lefttext{
         width: 100%;
@@ -1139,6 +1260,27 @@ footer{
     .leftimage{
         display: none;
     }
+    .reviews .testimonials{
+        order: 1;
+    }
+
+    .reviews h1{
+        order: 2;
+    }
+
+     .reviews .review{
+        order: 4;
+    }
+
+     .reviews .customers{
+        order: 5;
+    }
+    .newleftimage{
+        order: 3;
+    }
+    .newleftimage{
+        position: relative;
+    }
     
     .wrapper4{
         flex-direction: column;
@@ -1149,6 +1291,7 @@ footer{
     .reviews{
         width: 100%;
         align-items: center;
+        position: relative;
     }
 
     .reviews .review,
@@ -1205,8 +1348,15 @@ footer{
     .explore{
         display: none;
     }
-
-
+    .greenrect{
+        width: 506px;
+        z-index: 1;
+        bottom: 0%;
+    }
+    .pizza{
+        right: -60px;
+    }
+    
 
 }
 
@@ -1257,9 +1407,17 @@ footer{
 @media  screen and (max-width: 838px) and (min-width: 300px) {
     .lefttext h1{
         font-size: 24px;
+        margin-bottom: 12px;
     }
     .lefttext h4{
         font-size: 14px;
+    }
+    .buttons1{
+        margin-top: 12px;
+        margin-bottom: 46px;
+    }
+    .righttext.person{
+        margin-top: 40px
     }
 
     
@@ -1272,6 +1430,7 @@ footer{
     .watchimage{
         width: 48px;
         height: 48px;
+        margin-left: 10px;
     }
     .watch{
         font-size: 14px;
@@ -1284,23 +1443,29 @@ footer{
     .righttext .person{
         width: 336.809px;
         height: 330.588px;
-        margin-top: 196px;
+        margin-top: 40px;
     }
     .watchimage img{
-        width: 20px;
+        width: 15px;
         height: auto;
     }
     .hotspicyfood{
         width: 146px;
         height: 39.444px;
         font-size: 11.774px;
-        left: -20px;
+        left: 0;
+        top: 15px;
         filter: drop-shadow(15.306px 12.952px 30.024px rgba(0, 0, 0, 0.14));
     }
 
     .fooditems{
         flex-direction: column;
     }
+
+    .wrapper{
+        margin-bottom: 40px;
+    }
+
 
     .noodles{
         position: relative;
@@ -1318,11 +1483,12 @@ footer{
         height: 92px;
         padding: 10px;
     }
-    .foodname{
+    .food-name{
         font-size: 18px;
     }
     .noodleimg, .saladimg{
-        overflow: hidden;
+        height: auto;
+        width: 66px
     }
     .categories div{
         width: 156px;
@@ -1355,7 +1521,7 @@ footer{
         margin: 0 0 12px 0;
     }
 
-    .specialdishes{
+    .wrapper3 .specialdishes{
         font-size: 16px;
         margin: 0 0 12px 0;
     }
@@ -1416,8 +1582,9 @@ footer{
     .wrapper3{
         margin-bottom: 41px;
     }
-    .testimonials{
+    .reviews .testimonials{
         font-size: 16px;
+        letter-spacing: 2.8px;
     }
     .reviews h1{
         font-size: 24px;
@@ -1433,16 +1600,21 @@ footer{
     .newleftimage .greenrect{
         width: 199.849px;
         height: 141.421px; 
+        border-radius: 56.187px 56.187px 16.455px 16.455px;
     } 
-    .newleftimage{
+    .reviews .newleftimage{
         width: 206px;
         height: 291px;
         margin-bottom: 12px;
+        position: relative;
+        order: 3;
     }
     .compliment{
         width: 93.425px;
         height: 30.863px;
         font-size: 8.027px;
+        fill: #FFF;
+        filter: drop-shadow(2.809px 5.619px 17.257px rgba(0, 0, 0, 0.14));
     }
     .compliment::before{
         border-top: 10px solid transparent;
@@ -1464,15 +1636,17 @@ footer{
         height: 17.582px;
         right: 10px;
     }
-    .greenrect{
-        left: 3%;
-    }
+    /* .greenrect{
+    
+    } */
     .reviews .review{
         font-size: 14px;
+        margin-top: 12px;
     }
     .feedback h4{
         margin: 0;
         font-size: 14px;
+    
     }
     .feedback p numofreview{
         font-size: 14px;
@@ -1499,10 +1673,10 @@ footer{
         width: 154px;
         height: auto;
         /* height: 164px; */
-        padding: 24px 16px 23px 16px;
+        padding: 24px 12px 23px 13px;
     }
     .cards{
-        gap: 14px;
+        gap: 24px;
     }
     .card h6{
         color: #5FE26C;
@@ -1511,7 +1685,7 @@ footer{
         font-size: 14px;
         font-weight: 700;
         text-transform: uppercase;
-        margin: 8px;
+        margin: 10px 0 10px 0;
     }
     .card img{
         width: 32px;
@@ -1524,6 +1698,8 @@ footer{
         font-size: 12px;
         font-weight: 600;
         line-height: normal;
+        width: 120px;
+        height: 44.87px;
     }
     .explorebutton{
         font-size: 16px;
@@ -1570,6 +1746,7 @@ footer{
     }
     .contactus{
         width: 100%;
+        gap: 0;
     }
     .contactus .telemail{
         width: 100%;
@@ -1579,16 +1756,21 @@ footer{
     .contactus .telemail a{
         width: auto;
     }
+    .contactus h6{
+        margin-bottom: 12px;
+    }
     .socials{
         width: auto;
         justify-content: center;
     }
     .story{
         gap: 12px;
+        margin-bottom: 12px;
     }
     .foodicon{
         width: 66px;
         height: 25.011px;
+        margin-bottom: 13px;
     }
     .foodi p{
         font-size: 14px;
@@ -1628,6 +1810,44 @@ footer{
         display: none;
     }
     .hidden{
-        display: none;
+        display: block;
     }
+
+    .details{
+        margin-bottom: 24px;
+    }
+    .links{
+        gap: 8px;
+    }
+    .mainmenu{
+        gap: 8px;
+    }
+    .wrapper5{
+        margin-bottom: 0;
+        justify-content: flex-start;
+        gap: 0;
+
+    }
+    .shop,
+    .search{
+        margin-right: 25px;
+    }
+    .logo a{
+        width: 66px;
+        height: auto;
+    }
+    .logo img{
+        width: 66px;
+        height: auto;
+    }
+    header nav{
+        margin-bottom: 47px;
+        margin-top: 16px;
+    }
+
+    .customers{
+        justify-content: space-between;
+        gap: 0;
+    }
+
 }

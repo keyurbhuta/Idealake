@@ -18,8 +18,7 @@
                         <!-- Logo -->
                         <div class="logo">
                             <a href="#">
-                                <span class="f"><img src="images/F.png" alt="F" /></span>
-                                <img src="images/oodi.png" alt="Oodi" />
+                                <img src="images/foodi.png" alt="">
                             </a>
                         </div>
 
@@ -43,7 +42,14 @@
                                 Contact
                             </a>
                         </div>
+                        
                     </nav>
+                    <div class="sidemenu active">
+                            <a class="home" href="#">Home</a>
+                            <a class="menu" href="#">Menu <i class="fa-solid fa-chevron-down"></i></a>
+                            <a class="services" href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
+                            <a class="offers" href="#">Offers</a>
+                    </div>
             </header>
             <section>
                     <div class="wrapper">
@@ -175,7 +181,7 @@
             <section>
                 <div class="wrapper4">
                     <div class="leftimage">
-                        <img src="images/chef.png" alt="">
+                        <div class="chefimg"><img src="images/chef.png" alt=""></div>
                         <div class="greenrect"></div>
                         <div class="compliment">
                             Our Best Chef 😁
@@ -242,8 +248,7 @@
                     <div class="details">
                         <div class="foodi">
                             <div class="foodicon">
-                                <span class="ff"><img src="images/F.png" alt="F" /></span>
-                                <img src="images/oodi.png" alt="Oodi" />
+                                <img src="images/foodi.png" alt="">
                             </div>
                             <p>Savor the artistry where every dish is a culinary masterpiece</p>
                         </div>
@@ -287,66 +292,70 @@
             </section>
         </div>
         <script>
+            
             const titleSection = document.querySelector('.reviews');
-            const expandingmenu=document.querySelector('.rightmenu');
+            const cardsection = document.querySelector('.cards');
+            const headersection = document.querySelector('.rightmenu');
 
-            expandablemenu.classList.add('expandablemenu');
-            expandablemenu.innerHTML=`
-            <div class=expand><i class="fa-solid fa-bars fa-rotate-by" style="color: #000000;"></i>
-                <div class="hidden">
-                    <a class="hiddenhome" href="#">Home</a>
-                    <a class="hiddenmenu" href="#">Menu <i class="fa-solid fa-chevron-down"></i></a>
-                    <a class="hiddenservices" href="#">Services <i class="fa-solid fa-chevron-down"></i></a>
-                    <a class="hiddenoffers" href="#">Offers</a>
-                </div>
-            </div>`
-            // Create the new element once, but don't add it yet
+            // Create the elements
             const newLeftImage = document.createElement('div');
-            newLeftImage.classList.add('newLeftImage');
+            newLeftImage.classList.add('newleftimage');
             newLeftImage.innerHTML = `
-                <div class=chefimg><img src="images/chef.png" alt=""/></div>
+                <div class="chefimg"><img src="images/chef.png" alt=""/></div>
                 <div class="greenrect"></div>
                 <div class="compliment">Our Best Chef 😁</div>
                 <img src="images/yummy.png" alt="" class="yummy"/>
                 <img src="images/pizza.png" alt="" class="pizza"/>
             `;
-            
-            const cardsection=document.querySelector('.cards');
-            const explorebutton=document.createElement('button');
+
+            const explorebutton = document.createElement('button');
             explorebutton.classList.add('explorebutton');
-            explorebutton.innerHTML=`
-                <button class="explorebutton">Explore</button>
-            `;
+            explorebutton.textContent = 'Explore';
+
+            const Hidden = document.createElement('button');
+            Hidden.classList.add('hidden');
+            Hidden.innerHTML = `<img class="sidebar" src="images/sidebar.png" alt="Menu"/>`;
 
             function checkWidth() {
-                if(window.innerWidth < 1490){
+                // Handle chef image section for medium screens
+                if (window.innerWidth < 1490) {
                     if (!titleSection.contains(newLeftImage)) {
                         titleSection.appendChild(newLeftImage);
                     }
-                    if(!cardsection.contains(explorebutton)){
+                    if (!cardsection.contains(explorebutton)) {
                         cardsection.appendChild(explorebutton);
                     }
                 } else {
                     if (titleSection.contains(newLeftImage)) {
                         titleSection.removeChild(newLeftImage);
                     }
-                    if(cardsection.contains(explorebutton)){
+                    if (cardsection.contains(explorebutton)) {
                         cardsection.removeChild(explorebutton);
                     }
                 }
+
+                // Handle sidebar button for smaller screens
+                if (window.innerWidth < 838) {
+                    if (!headersection.contains(Hidden)) {
+                        headersection.appendChild(Hidden);
+                    }
+                } else {
+                    if (headersection.contains(Hidden)) {
+                        headersection.removeChild(Hidden);
+                    }
+                }
             }
-            // function checkWidth(){
-            //     if(window.innerWidth<830){
-            //         if(!expandablemenu.contains())
-            //     }
-            // }
 
             // Run on load
             checkWidth();
 
-            // Also listen to window resize
+            // Listen to window resize
             window.addEventListener('resize', checkWidth);
-
+            
+            const sidemenu = document.querySelector('.sidemenu');
+            Hidden.addEventListener('click', () => {
+                sidemenu.classList.toggle('active');
+            });
         </script>
 </body>
 </html>

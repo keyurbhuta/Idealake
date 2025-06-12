@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health</title>
+    <link href="assets/css/project.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <img class="logo" src="./assets/images/logo.png" alt="Logo">
+                <div class="links">
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Team</a>
+                    <span><a href="tel:contact">Contact</a></span>
+                </div>
+                <div class="off-screen-menu">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                </div>
+
+                <nav class="hamburger">
+                    <div class="ham-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+        <section class="new-era">
+            <div class="container">
+                <div class="wrapper1">
+                    <h1 class="dawnofera">The dawn of a new era in health is here</h1>
+                    <p class="dawnofera-subtitle">Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea orci vel elit blandit facilisis </p>
+                    <button class="join-button">Join now</button>
+                    <div class="wrapper1images">
+                        <img class= wrapper1image1 src="assets/images/wrapper1img1.png" alt="">
+                        <img class="wrapper1image2" src="assets/images/wrapper1img2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wellbeing">
+            <div class="wrapper2">
+                <div class="wellbeing-lefttext">
+                    <h2 class="wellbeing-header">Wellbeing is welldoing</h2>
+                    <div class="wellbeingdivs">
+                        <div class="wellbeingleftdiv">
+                            <img src="assets/images/leaf.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea orci vel elit.</p>
+                        </div>
+                        <div class="wellbeingrightdiv">
+                            <img src="assets/images/leaf.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea orci vel elit.</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="assets/images/yoga.png" alt="">
+            </div>
+        </section>
+    </div>
+    <script>
+        const hamMenu = document.querySelector(".ham-menu");
+
+        const offScreenMenu = document.querySelector(".off-screen-menu");
+
+        hamMenu.addEventListener("click", () => {
+        hamMenu.classList.toggle("active");
+        offScreenMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
