@@ -122,6 +122,7 @@ img, picture, video, canvas, svg {
 }
 
 .btn{
+    cursor: pointer;
     display: flex;
     width: 251px;
     height: 56px;
