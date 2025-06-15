@@ -161,6 +161,11 @@ nav{
     align-items: center;
 }
 
+.links a:hover{
+    background: var(--primary-color);
+    color: white;
+}
+
 .navbar .links a{
     margin-right: 40px;
     font-family: var(--font-regular);
@@ -199,10 +204,6 @@ nav{
 
 ul{
     list-style: none;
-}
-
-ul li{
-
 }
 
 ul li a{
@@ -250,6 +251,7 @@ ul li a{
     position: absolute;
     left: 50%;
     top: 50%;
+    transition: 0.3s;
 }
 .ham-menu span:nth-child(1) {
     top: 75%;
@@ -321,6 +323,11 @@ img.wrapper1image1{
     color: var(--secondary-text);
     
     margin-bottom: 56px;
+}
+
+.btn.join-button:hover{
+    background:var(--secondary-text);
+    background: var(--primary-background);
 }
 
 .dawnofera{
@@ -777,6 +784,11 @@ h3{
     margin-bottom: 50px;
 }
 
+.btn.transparent{
+    background: var(--secondary-text);
+    color: transparent;
+}
+
 .plantprotective{
     display: grid;
     padding: 119px 66px 119px 66px;
@@ -893,6 +905,10 @@ h3{
     line-height: 24px;
 }
 
+.footer-links a:hover{
+    color:rgb(225, 218, 218)
+}
+
 .footer-socials{
     display: flex;
     align-items: center;
@@ -904,6 +920,12 @@ h3{
     width: 24px;
     height: 24px;
     margin-right: 24px;
+}
+
+.footer-socials a:hover{
+    background: var(--secondary-text);
+    color: var(--primary-color);
+    border-radius: 50%;
 }
 
 .footer-socials a img{
