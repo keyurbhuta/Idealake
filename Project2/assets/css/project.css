@@ -48,6 +48,12 @@ section{
     padding: 53px 0 53px 0;
 }
 
+@media screen and (max-width: 1350px) {
+    .container{
+        padding: 10px;
+    }
+}
+
 @media screen and (max-width: 1240px) {
     .container{
         max-width: 1190px;
@@ -243,8 +249,29 @@ ul{
     list-style: none;
 }
 
-.off-screen-menu.active li a:hover{
+ul li{
+    position: relative;
+}
+
+/* .off-screen-menu.active li a:hover{
     color: rgb(202, 193, 193)
+} */
+
+ul li a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+ul li a:hover::after{
+    width: 80%;
+    transform: translate(-50%);
 }
 
 ul li a{
@@ -588,6 +615,11 @@ img.wrapper1image1{
     flex: 0 0 623px;
     height: 577px;
     border-radius: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+.organic-image:hover{
+    transform:translateY(-10px);
 }
 
 .organicproduce-text{
@@ -662,6 +694,9 @@ img.wrapper1image1{
     }
     .holding-plants{
         width: 360px;
+    }
+    .organic span{
+        display: none;
     }
     .organic-heading,
     .organic-desc{
@@ -805,16 +840,24 @@ img.wrapper1image1{
 
 
 .finalwrapper{
-    position: relative;
     margin-bottom: -10%;
+    position: relative;
 }
 
+.finalwrapper img{
+    z-index: -1;
+    position: relative;
+    /* width: 1302px;
+    height: 667px; */
+    object-fit: cover;
+}
 .picturetext{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/background.png");
+    position: absolute;
+    top: 0;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -822,7 +865,7 @@ img.wrapper1image1{
     height: 667px;
     color:  #fff;
     /* margin-bottom: 233px; */
-    mix-blend-mode: darken;
+    z-index: 2;
 }
 
 .picturetext p{
@@ -919,6 +962,10 @@ h3{
         top: -68px;
         /* top: 286px; */
     }
+    .finalwrapper .background-img img{
+        height: 354px;
+        border-radius: 12px;
+    }
     .plant.one,
     .plant.two,
     .plant.three{
@@ -987,14 +1034,29 @@ h3{
     line-height: 24px;
     border-radius: 20px;
     transition: 0.2s ease-in-out;
+    position: relative;
 }
 
-.footer-links a:hover{
+/* .footer-links a:hover{
     color: rgb(172, 168, 168);
+} */
+
+/* .footer-links a:hover{
+    color:rgb(225, 218, 218)
+} */
+.footer-links a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-in-out;
 }
 
-.footer-links a:hover{
-    color:rgb(225, 218, 218)
+.footer-links a:hover::after{
+    width: 80%;
 }
 
 .footer-socials{
@@ -1042,7 +1104,7 @@ h3{
     .link.one,
     .link.two
     {
-        padding-bottom: 36px;
+        margin-bottom: 36px;
     }
     .footer{
         align-items: center;

@@ -8,7 +8,7 @@
     <link href="assets/css/project.css" rel="stylesheet">
 </head>
 <body>
-    
+   
     <header>
         <div class="container">
             <nav class="navbar">
@@ -45,8 +45,8 @@
                     <p class="dawnofera-subtitle">Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea orci vel elit blandit facilisis </p>
                     <button class="btn join-button" type="button">Join now</button>
                     <div class="wrapper1images">
-                        <img class= wrapper1image1 src="assets/images/wrapper1img1.png" alt="">
-                        <img class="wrapper1image2" src="assets/images/wrapper1img2.png" alt="">
+                        <img class= wrapper1image1 src="assets/images/wrapper1img1.png" alt="" width="626" height="391">
+                        <img class="wrapper1image2" src="assets/images/wrapper1img2.png" alt="" width="626" height="391">
                     </div>
                 </div>
             </div>
@@ -86,15 +86,15 @@
                         <div class="organic-list">
                             <div class="organic one">
                                 <img src="assets/images/flower.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea</p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat <span>at a. Diam lacus platea</p></span>
                             </div>
                             <div class="organic two">
                                 <img src="assets/images/flower.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea</p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat <span>at a. Diam lacus platea</p></span>
                             </div>
                             <div class="organic three">
                                 <img src="assets/images/flower.png" alt="">
-                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea</p>
+                                <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat <span>at a. Diam lacus platea</p></span>
                             </div>
                         </div>
                     </div>
@@ -126,8 +126,11 @@
         <section >
             <div class="container">
                 <div class="finalwrapper">
+                    <div class="background-img">
+                        <img src="assets/images/background.png" alt="" height="667px">
+                    </div>
                     <div class="picturetext">
-                        <img class="leaf" src="assets/images/leaf_transparent.png" alt="">
+                        <img class="leaf" src="assets/images/leaf_transparent.png" alt="" width = "1302" height="667px">
                         <h3>Wellbeing starts with well doing</h3>
                         <p>Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam lacus platea orci vel elit blandit facilisis enim risus. Ut tristique eget integer odio nec.</p>
                         <button class="btn second" type="button">Join now</button>
@@ -173,42 +176,6 @@
             </div>
         </footer>
     </div>
-    <script>
-        // const hamMenu = document.querySelector(".ham-menu");
-
-        // const offScreenMenu = document.querySelector(".off-screen-menu");
-
-        // hamMenu.addEventListener("click", () => {
-        // hamMenu.classList.toggle("active");
-        // offScreenMenu.classList.toggle("active");
-        // });
-        const hamburger = document.querySelector('.hamburger');
-        const offScreenMenu = document.querySelector('.off-screen-menu');
-        // const links = document.querySelector('.links');
-        const hammenu=document.querySelector('.ham-menu');
-
-
-
-        hamburger.addEventListener('click', () => {
-            offScreenMenu.classList.toggle('active');
-            // links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        hamburger.addEventListener("click", function (){
-            hammenu.classList.toggle("active");
-        });
-
-        function checkWidthAndRemoveClass() {
-            if (window.innerWidth > 768) {
-                hamburger.classList.remove('active');
-                offScreenMenu.classList.remove('active');
-            }
-        }
-
-        checkWidthAndRemoveClass();
-
-        window.addEventListener('resize', checkWidthAndRemoveClass);
-
-    </script>
+    <script src="assets/javascript/project.js"></script>
 </body>
 </html>
