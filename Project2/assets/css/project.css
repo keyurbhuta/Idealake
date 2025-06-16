@@ -842,6 +842,11 @@ h3{
     color: var(--primary-color);
 }
 
+.btn.transparent{
+    background: var(--secondary-text);
+    color: transparent;
+}
+
 .plantprotective{
     display: grid;
     padding: 119px 66px 119px 66px;
@@ -963,6 +968,10 @@ h3{
     color: rgb(172, 168, 168);
 }
 
+.footer-links a:hover{
+    color:rgb(225, 218, 218)
+}
+
 .footer-socials{
     display: flex;
     align-items: center;
@@ -982,6 +991,12 @@ h3{
 
 .footer-socials a:hover{
     transform: translateY(-10px);
+}
+
+.footer-socials a:hover{
+    background: var(--secondary-text);
+    color: var(--primary-color);
+    border-radius: 50%;
 }
 
 .footer-socials a img{
