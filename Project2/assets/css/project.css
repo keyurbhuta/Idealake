@@ -60,9 +60,12 @@ section{
     }
 } 
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .container{
         max-width: 680px;
+    }
+    section{
+        padding: 18px 0 18px 0;
     }
 }
 @media screen and (max-width: 430px) {
@@ -103,6 +106,11 @@ h2{
     padding-bottom: 61px;
     /* line-height: 62px; */
 }
+@media screen and (max-width: 768px){
+    h2{
+        line-height: 50px; 
+    }
+}
 h3{
     color: #FFF;
 
@@ -122,6 +130,7 @@ img, picture, video, canvas, svg {
 }
 
 .btn{
+    cursor: pointer;
     display: flex;
     width: 251px;
     height: 56px;
@@ -161,14 +170,26 @@ nav{
     align-items: center;
 }
 
+.links a{
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar .links a:hover{
+    background: var(--primary-color);
+    color: white;
+
+}
+
 .navbar .links a{
-    margin-right: 40px;
     font-family: var(--font-regular);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px; /* 150% */
     color: var(--dark2);
-    padding-top: 33px;
+    margin-top: 33px;
+    padding: 5px 20px 5px 20px;
+    transition: 0.2s;
 }
 
 .navbar .links span {
@@ -195,14 +216,19 @@ nav{
 }
 .off-screen-menu.active {
     right: 0;
+    padding-top: 50px;
+}
+
+.off-screen-menu.active li a{
+    transition: 0.2s;
 }
 
 ul{
     list-style: none;
 }
 
-ul li{
-
+.off-screen-menu.active li a:hover{
+    color: rgb(202, 193, 193)
 }
 
 ul li a{
@@ -250,6 +276,7 @@ ul li a{
     position: absolute;
     left: 50%;
     top: 50%;
+    transition: 0.3s;
 }
 .ham-menu span:nth-child(1) {
     top: 75%;
@@ -271,7 +298,12 @@ ul li a{
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1240px){
+    .navbar{
+        padding-bottom: 0;
+    }
+}
+@media screen and (max-width: 768px) {
     .hamburger{
         display: flex;
     }
@@ -283,6 +315,9 @@ ul li a{
     }
     .off-screen-menu{
         display:block;
+    }
+    .navbar{
+        padding-bottom: 46px;
     }
 }
 /* section 1 ---------------------------------------------*/
@@ -299,6 +334,11 @@ ul li a{
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+
+.wrapper1images img:hover{
+    transform:translateY(-10px);
 }
 
 .wrapper1images img{
@@ -306,6 +346,7 @@ ul li a{
     width: 100%;
     object-fit: cover;
     border-radius: 16px;
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -319,8 +360,12 @@ img.wrapper1image1{
     background: var(--primary-color);
     
     color: var(--secondary-text);
-    
+    transition: opacity 0.2s;
     margin-bottom: 56px;
+}
+
+.btn.join-button:hover{
+    opacity: 0.8;
 }
 
 .dawnofera{
@@ -356,10 +401,11 @@ img.wrapper1image1{
     }
     h1{
         font-size: 37.9px;
+        line-height: 47px; /* 124.011% */
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .wrapper1images{
         flex-direction: column;
     }
@@ -406,6 +452,10 @@ img.wrapper1image1{
     display: flex;
     justify-content: center;
     align-items:flex-end;
+}
+
+.wellbeing-header{
+    padding-bottom: 40px;
 }
 
 .yoga-img img{
@@ -460,7 +510,7 @@ img.wrapper1image1{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .wrapper2{
         padding: 100px 36px 5px 
     }
@@ -487,7 +537,7 @@ img.wrapper1image1{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .wellbeingdivs{
         flex-direction: column;
         padding: 0;
@@ -549,6 +599,7 @@ img.wrapper1image1{
 
 .organic p{
     padding-left: 23px;
+    color: var(--primary-color);
 }
 
 .organic.one{
@@ -568,7 +619,7 @@ img.wrapper1image1{
     padding-bottom: 45px;
     }
     .organic-heading{
-        padding-bottom: 0;
+        padding-bottom: 16px;
     }
 }
 
@@ -582,9 +633,13 @@ img.wrapper1image1{
     .organic.one{
     padding-top: 26px;
     }
+    .organic-desc{
+        padding-bottom: 0;
+    }
+
 }
 
-@media screen and (max-width: 991px){
+@media screen and (max-width: 768px){
     .wrapper3{
         flex-direction: column;
     }
@@ -594,10 +649,12 @@ img.wrapper1image1{
     .organic-heading,
     .organic-desc{
         text-align: center;
-        padding: 0;
+    }
+    .organic-heading{
+        padding-bottom: 16px;
     }
     .organicproduce-text{
-        padding-left: 0;
+        padding: 14px 0 0 0;
     }
 }
 
@@ -685,12 +742,6 @@ img.wrapper1image1{
     }
 }
 
-@media screen and (max-width: 767px){
-    .wrapper4{
-        padding: 100px 36px 5px 
-    }
-}
-
 @media screen and (max-width: 991px){
     .wellbeing2-lefttext{
         padding: 0px 50px 0px 50px;
@@ -712,7 +763,7 @@ img.wrapper1image1{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .wellbeing2divs{
         flex-direction: column;
         padding: 0;
@@ -724,7 +775,14 @@ img.wrapper1image1{
     .wellbeing2-lefttext{
         padding: 0;
     }
+    .wellbeing2-lefttext h2{
+        padding-bottom: 35px;
+    }
+    /* .wrapper4{
+        padding:56px 110px 56px 110px;
+    } */
 }
+
 
 /* Last section-------------------------------------------- */
 
@@ -747,6 +805,7 @@ img.wrapper1image1{
     height: 667px;
     color:  #fff;
     margin-bottom: 233px;
+    mix-blend-mode: darken;
 }
 
 .picturetext p{
@@ -762,19 +821,25 @@ img.wrapper1image1{
 .leaf{
     width: 92px;
     height: 82px;
-    margin-right: 11px;
 }
 
 h3{
-    width: 640px;
     padding-top: 45px;
     padding-bottom: 12px;
 }
 
-.btn.transparent{
+.btn.second{
     border-radius: 67px;
     border: 1px solid var(--primary-background);
     margin-bottom: 50px;
+    background: transparent;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn.second:hover{
+    background: white;
+    color: var(--primary-color);
 }
 
 .plantprotective{
@@ -820,7 +885,7 @@ h3{
     }
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
     .plantprotective{
         grid-template-columns: repeat(1, 1fr);
         padding: 71px 0 71px 0;
@@ -843,10 +908,9 @@ h3{
     h3{
         font-size: 21.33px;
         line-height: 31px;
-        padding-top: 13px;
-        padding-bottom: 13px;
+        padding: 13px 62.5px 13px 62.5px;
     }
-    .btn.transparent{
+    .btn.second{
         height: 46px;
         padding: 16px;
         font-size: 16.33px;
@@ -891,6 +955,12 @@ h3{
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+    border-radius: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.footer-links a:hover{
+    color: rgb(172, 168, 168);
 }
 
 .footer-socials{
@@ -904,6 +974,14 @@ h3{
     width: 24px;
     height: 24px;
     margin-right: 24px;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-socials a:hover{
+    transform: translateY(-10px);
 }
 
 .footer-socials a img{
@@ -921,14 +999,32 @@ h3{
         padding-top: 36px;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .footer-links{
         grid-template-columns: repeat(2, 88px);
-        justify-content: flex-start;
+        justify-content: center;
     }
     .link.one,
     .link.two
     {
         padding-bottom: 36px;
+    }
+    .footer{
+        align-items: center;
+    }
+    .footer-logolink{
+        align-items: center;
+    }
+    .footer-socials a img{
+        object-fit: cover;
+        overflow:visible;
+        width: 21px;
+        height: 22px;
+    }
+    .footer-socials{
+        justify-content: center;
+    }
+    .footer-socials{
+        text-align: center;
     }
 }
