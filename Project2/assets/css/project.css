@@ -907,12 +907,12 @@ h3{
     color: transparent;
 }
 
-.plantprotective{
-    display: grid;
-    padding: 119px 66px 119px 66px;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
+.plantprotective {
+    display: flex;
+    flex-wrap: wrap; /* Enables wrapping into rows for responsiveness */
+    padding: 119px 66px 94px 66px;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Aligns items vertically */
     position: relative;
     top: -165px;
     left: 50%;
@@ -924,77 +924,78 @@ h3{
     object-fit: contain;
 }
 
-.plant{
+.plant {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 25px; /* Adds spacing between items */
+    flex: 1 1 calc(25% - 50px); /* Four columns layout with responsive behavior */
+    max-width: calc(25% - 50px); /* Matches the flex calculation */
 }
 
-.plant p{
+.plant p {
     text-align: center;
 }
 
-@media screen and (max-width:1240px){
-    .plantprotective{
-        grid-template-columns: repeat(2, 1fr);
-        padding: 71px 66px 71px 66px;
-        max-width: 743px
+@media screen and (max-width: 1240px) {
+    .plantprotective {
+        padding: 61px 66px 61px 66px;
+        max-width: 743px;
     }
-    .plant.one,
-    .plant.two{
-        margin-bottom: 49px
-    }
-    .picturetext{
-        /* margin-bottom: 240px; */
-        border-radius: 12px;
-    }
-    .finalwrapper{
-        margin-bottom: -10%;
+
+    .plant {
+        flex: 1 1 calc(50% - 50px); /* Two columns for smaller screens */
+        max-width: calc(50% - 50px);
     }
 }
 
-@media screen and (max-width: 768px){
-    .plantprotective{
-        grid-template-columns: repeat(1, 1fr);
-        padding: 71px 0 71px 0;
+@media screen and (max-width: 768px) {
+    .plantprotective {
+        padding: 61px 0 61px 0;
         max-width: 298px;
         top: -68px;
-        /* top: 286px; */
     }
-    .finalwrapper .background-img img{
+
+    .plant {
+        flex: 1 1 100%; /* Single column for mobile screens */
+        max-width: 100%;
+        margin: 10px 0; /* Adjust vertical margins for mobile */
+    }
+
+    .finalwrapper .background-img img {
         height: 354px;
         border-radius: 12px;
     }
-    .plant.one,
-    .plant.two,
-    .plant.three{
-        margin-bottom: 49px;
-    }
-    .picturetext{
-        /* margin-bottom: 643px; */
+
+    .picturetext {
         height: 354px;
     }
-    .leaf{
+
+    .leaf {
         width: 46px;
         height: 41px;
     }
-    h3{
+
+    h3 {
         font-size: 21.33px;
         line-height: 31px;
         padding: 13px 62.5px 13px 62.5px;
     }
-    .btn.second{
+
+    .btn.second {
         height: 46px;
         padding: 16px;
         font-size: 16.33px;
         line-height: 24px;
         width: 198px;
     }
-    .picturetext p{
+
+    .picturetext p {
         display: none;
     }
-    .finalwrapper{
+
+    .finalwrapper {
         margin-bottom: -10%;
     }
 }
@@ -1114,7 +1115,7 @@ h3{
     }
     .footer-socials a img{
         object-fit: cover;
-        overflow:visible;
+        /* overflow:visible; */
         width: 21px;
         height: 22px;
     }
