@@ -109,6 +109,7 @@ h2{
 @media screen and (max-width: 768px){
     h2{
         line-height: 50px; 
+        font-size: 39.7px;
     }
 }
 h3{
@@ -512,14 +513,15 @@ img.wrapper1image1{
 
 @media screen and (max-width: 768px){
     .wrapper2{
-        padding: 100px 36px 5px 
+        padding: 100px 52px 0px 52px; 
+    }
+    .wellbeing-lefttext{
+        padding-bottom: 0;
     }
 }
 
 @media screen and (max-width: 991px){
-    .wellbeing-lefttext{
-        padding: 0px 50px 0px 50px;
-    }
+    
 
     /* .wellbeingdivs{
         flex-direction: column;
@@ -887,6 +889,7 @@ h3{
     }
     .picturetext{
         margin-bottom: 240px;
+        border-radius: 12px;
     }
 }
 
@@ -993,12 +996,6 @@ h3{
     transform: translateY(-10px);
 }
 
-.footer-socials a:hover{
-    background: var(--secondary-text);
-    color: var(--primary-color);
-    border-radius: 50%;
-}
-
 .footer-socials a img{
     width: 24px;
     height: 24px
@@ -1018,6 +1015,7 @@ h3{
     .footer-links{
         grid-template-columns: repeat(2, 88px);
         justify-content: center;
+        width: auto;
     }
     .link.one,
     .link.two
@@ -1028,7 +1026,7 @@ h3{
         align-items: center;
     }
     .footer-logolink{
-        align-items: center;
+        align-items: flex-start;
     }
     .footer-socials a img{
         object-fit: cover;
