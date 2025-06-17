@@ -480,6 +480,11 @@ img.wrapper1image1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.wellbeingdivs div{
+    width: 243px;
 }
 
 .yoga-img{
@@ -703,8 +708,12 @@ img.wrapper1image1{
 
 .wellbeing2divs{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    flex-wrap: wrap
+}
+.wellbeing2divs div{
+    width: 243px;
 }
 
 .fruits-img{

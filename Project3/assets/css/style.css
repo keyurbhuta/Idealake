@@ -1,0 +1,409 @@
+:root {
+    --font-medium: "Inter-Medium";
+    --font-semibold: "Inter-SemiBold";
+    --font-regular: "Inter-Regular";
+    --font-bold: "Inter-Bold";
+    --font-light: "Inter-Light";
+    --font-black: "Inter-Black";
+    --text-white: #fff;
+    --primary-text: #171717;
+    --primary-color: #8B5CF6;
+    --secondary-text: #262626;
+    --desc-color: #737373;
+    --border-color: #e5e5e5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid red; /* Or another color for clarity */
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1506px;
+    margin: 0 auto 0 auto;
+}
+/* First section----------------------------------------------------------------------------------------------- */
+/* .image-section{
+    overflow: hidden;
+    text-align:center;
+}
+
+.background{
+    position: relative;
+    top: 0;
+    width: 1726px;
+    height: auto;
+     margin-left: 50%; 
+     transform: translateX(-50%); 
+     transform: translateY(-25%); 
+    width: 1726px;
+}
+ .background img{
+    object-fit: none;
+    height: auto;
+} 
+
+.absolute-section{
+    position: absolute;
+    top: 0;
+}  */
+
+header{
+    width: 100%;
+    padding: 40px 8px 40px 8px;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar a{
+    color: var(--primary-text);
+/* XL/XL Normal */
+    font-family: var(--font-medium);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px; /* 140% */
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.links a{
+    position: relative;
+}
+
+.links a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 0.3125rem; /* 5px */
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.2s ease-in-out;
+}
+
+.links a:hover::after{
+    width: 100%;
+}
+.links a.contactus::after,
+.links a.lightdark::after{
+    content: none;
+}
+
+
+/* .navbar a:last-child{
+    margin-right: 0;
+} */
+
+.logo{
+    align-self: flex-start;
+}
+
+.navbar .contactus{
+    color: var(--text-white);
+    /* LG/LG Strong */
+    font-family: var(--font-medium);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.32px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    padding: 10px 24px 10px 24px;
+    margin-right: 20px;
+}
+.navbar .lightdark{
+    padding: 11px;
+    vertical-align: middle;
+}
+.navbar .lightdark.active{
+    color: var(--text-white);
+    background: var(--secondary-text);
+}
+
+.off-screen-menu {
+    background-color:  var(--primary-color);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -150.125rem; /* -770px */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;
+    font-size: 3rem;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 0.625rem; /* 10px */
+}
+.off-screen-menu.active {
+    /* display: flex; */
+    right: 0;
+    padding-top: 3.125rem; /* 50px */
+    z-index: 2;
+}
+
+.off-screen-menu.active li a{
+    transition: 0.2s;
+}
+
+ul{
+    list-style: none;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+}
+
+ul li{
+    position: relative;
+    display: flex;
+    justify-content: center;align-items: center;
+}
+
+ul li a::after{
+    content: '';
+    width: 0;
+    position: absolute;
+    height: 0.1875rem; /* 3px */
+    background-color: #fff;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+ul li a:hover::after{
+    width: 80%;
+    transform: translate(-50%);
+}
+
+.navbar ul li a{
+    color: var(--text-white);
+    font-size: 0.875rem; /* 14px */
+    margin-right: 0;
+}
+
+.menu{
+    display: none;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 991px) {
+    .links{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+/* Hero ------------------------------------------------------------------------- */
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 787px;
+}
+
+.hero-heading{
+    color: var(--secondary-text);
+    text-align: center;
+    font-family: var(--font-bold);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 110%; /* 88px */
+    margin-bottom: 40px;
+}
+
+.hero-text{
+    color: var(--desc-color);
+    text-align: center;
+    font-family: var(--font-regular);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 31.2px */
+    margin-bottom: 40px;
+}
+
+.travel{
+    display: flex;
+    display: flex;
+    width: auto;
+    padding: 14px 32px;
+    justify-content: center;
+    align-items: center;
+    border-radius:8px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    font-family: var(--font-regular);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.32px;
+    margin-bottom: 12px;
+}
+
+.watchvideo{
+    display: flex;
+    padding: 14px 24px 14px 32px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-Primary-colorPrimaryBase, #8B5CF6);
+    font-family: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%; /* 16px */
+    letter-spacing: 0.32px;
+}
+.watchvideo img{
+    margin-left: 8px;
+}
+
+/* Explore Card section--------------------------------------------------------- */
+
+.explore-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 128px 120px;
+    flex-wrap: wrap;
+}
+
+.explore-card{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px 32px;
+    border-radius: 10px;
+    background: #000;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+/* .explore-card:last-child{
+    margin-right: 0;
+} */
+
+@media screen and (max-width: 1150px) {
+    .explore-card{
+        width: 100%;
+    }
+}
+.explore-icon{
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.explore-desc{
+    width: 322px;
+}
+
+.explore-topic{
+    color: var(--text-white);
+    font-family: var(--font-semibold);
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 100%; /* 38px */
+    margin-bottom: 10px;
+}
+
+.explore-text{
+    color: var(--text-white);
+    font-family: var(--font-regular);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+}
+
+/* Course Cards -----------------------------------------------*/
+
+
+.courses-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-cards{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.course-card{
+    padding: 16px;
+    margin-right: 12px;
+    margin-left: 12px;
+    width: 354.5px;
+    border-radius: 16px;
+    border: 1px solid var();
+    background: var(--text-white);
+    position: relative;
+}
+.course-card:last-child{
+    margin-right: 0;
+}
+.course-card:first-child{
+    margin-left: 0;
+}
+
+.courses-wrapper h3{
+    color: var(--primary-text);
+    font-family: var(--font-semibold);
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 100%; /* 38px */
+    margin-bottom: 40px;
+}
+
+.course-card h4{
+    color: var(--primary-text);
+    font-family: var(--font-semibold);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px; /* 133.333% */
+    margin-bottom: 8px;
+}
+
+.course-card p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.label{
+    position: absolute;
+    top: 33px;
+    left: 29px;
+    padding: 8px 16px;
+    background: var(--primary-color);
+    color: var(--text-white);
+    font-family: var(--font-medium);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 14px */
+    letter-spacing: 0.28px;
+    border-radius: 8px;
+}

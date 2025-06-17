@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Inter-Black';
+    src: url('../fonts/InterTight-Black.eot');
+    src: url('../fonts/InterTight-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Black.woff2') format('woff2'),
+        url('../fonts/InterTight-Black.woff') format('woff'),
+        url('../fonts/InterTight-Black.ttf') format('truetype'),
+        url('../fonts/InterTight-Black.svg#../fonts/InterTight-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('../fonts/InterTight-Bold.eot');
+    src: url('../fonts/InterTight-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Bold.woff2') format('woff2'),
+        url('../fonts/InterTight-Bold.woff') format('woff'),
+        url('../fonts/InterTight-Bold.ttf') format('truetype'),
+        url('../fonts/InterTight-Bold.svg#InterTight-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Light';
+    src: url('../fonts/InterTight-Light.eot');
+    src: url('../fonts/InterTight-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Light.woff2') format('woff2'),
+        url('../fonts/InterTight-Light.woff') format('woff'),
+        url('../fonts/InterTight-Light.ttf') format('truetype'),
+        url('../fonts/InterTight-Light.svg#InterTight-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../fonts/InterTight-Regular.eot');
+    src: url('../fonts/InterTight-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Regular.woff2') format('woff2'),
+        url('../fonts/InterTight-Regular.woff') format('woff'),
+        url('../fonts/InterTight-Regular.ttf') format('truetype'),
+        url('../fonts/InterTight-Regular.svg#InterTight-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('../fonts/InterTight-Medium.eot');
+    src: url('../fonts/InterTight-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Medium.woff2') format('woff2'),
+        url('../fonts/InterTight-Medium.woff') format('woff'),
+        url('../fonts/InterTight-Medium.ttf') format('truetype'),
+        url('../fonts/InterTight-Medium.svg#InterTight-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-Thin';
+    src: url('../fonts/InterTight-Thin.eot');
+    src: url('../fonts/InterTight-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-Thin.woff2') format('woff2'),
+        url('../fonts/InterTight-Thin.woff') format('woff'),
+        url('../fonts/InterTight-Thin.ttf') format('truetype'),
+        url('../fonts/InterTight-Thin.svg#InterTight-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url('../fonts/InterTight-SemiBold.eot');
+    src: url('../fonts/InterTight-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/InterTight-SemiBold.woff2') format('woff2'),
+        url('../fonts/InterTight-SemiBold.woff') format('woff'),
+        url('../fonts/InterTight-SemiBold.ttf') format('truetype'),
+        url('../fonts/InterTight-SemiBold.svg#InterTight-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
