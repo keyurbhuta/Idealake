@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health</title>
     <link href="assets/css/fonts.css" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link href="assets/css/style.css" rel="stylesheet">
+    
     
 </head>
 <body>
@@ -44,7 +49,7 @@
                         <h1 class="hero-heading">Where the joy of learn meets the power of community</h1>
                         <p class="hero-text">Dive deep in immersive, interactive small groups. Expand horizons, engage in discussions, and elevate your learning journey with us.</p>
                         <a class="btn travel"href="javascript:void(0)">Start your travel</a>
-                        <p class="watchvideo">Watch video <img src="assets/images/arrow-right.png" alt=""></p>
+                        <a href="javascript:void(0)"><p class="watchvideo">Watch video <img src="assets/images/arrow-right.png" alt=""></p></a>
                     </div>
                 </section>
                 <section class="explore-cards">
@@ -63,8 +68,8 @@
                                 <img src="assets/images/people.png" alt="">
                             </div>
                             <div class="explore-desc">
-                                <h3 class="explore-topic">Explore topics</h3>
-                                <p class="explore-text">Explore our selection of courses in development</p>
+                                <h3 class="explore-topic">Meet new friends</h3>
+                                <p class="explore-text">Join the network with million of students and learn</p>
                             </div>
                         </div>
                         <div class="explore-card">
@@ -72,66 +77,207 @@
                                 <img src="assets/images/people.png" alt="">
                             </div>
                             <div class="explore-desc">
-                                <h3 class="explore-topic">Explore topics</h3>
-                                <p class="explore-text">Explore our selection of courses in development</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="popular-courses">
-                    <div class="courses-wrapper">
-                        <h3>Popular courses</h3>
-                        <div class="course-cards">
-                            <div class="course-card">
-                                <div class="label">Label</div>
-                                <div class="cardcontent">
-                                    <img src="assets/images/course-bg.png" alt="">
-                                    <h4>Frontend Development with JavaScript</h4>
-                                    <p>By Cristian Muñoz</p>
-                                    <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
-                                    <p><span class="price">80.00 USD</span><span class="discount">80% discount</span></p>
-                                    <a href="javascript:void(0)" class="buybtn">Buy now <span>$14.00 USD</span></a>
-                                </div>
-                            </div>
-                            <div class="course-card">
-                                <div class="label">Label</div>
-                                <div class="cardcontent">
-                                    <img src="assets/images/course-bg.png" alt="">
-                                    <h4>Frontend Development with JavaScript</h4>
-                                    <p>By Cristian Muñoz</p>
-                                    <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
-                                    <p><span class="price">80.00 USD</span><span class="discount">80% discount</span></p>
-                                    <a href="javascript:void(0)" class="buybtn">Buy now <span>$14.00 USD</span></a>
-                                </div>
-                            </div>
-                            <div class="course-card">
-                                <div class="label">Label</div>
-                                <div class="cardcontent">
-                                    <img src="assets/images/course-bg.png" alt="">
-                                    <h4>Frontend Development with JavaScript</h4>
-                                    <p>By Cristian Muñoz</p>
-                                    <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
-                                    <p><span class="price">80.00 USD</span><span class="discount">80% discount</span></p>
-                                    <a href="javascript:void(0)" class="buybtn">Buy now <span>$14.00 USD</span></a>
-                                </div>
-                            </div>
-                            <div class="course-card">
-                                <div class="label">Label</div>
-                                <div class="cardcontent">
-                                    <img src="assets/images/course-bg.png" alt="">
-                                    <h4>Frontend Development with JavaScript</h4>
-                                    <p>By Cristian Muñoz</p>
-                                    <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
-                                    <p><span class="price">80.00 USD</span><span class="discount">80% discount</span></p>
-                                    <a href="javascript:void(0)" class="buybtn">Buy now <span>$14.00 USD</span></a>
-                                </div>
+                                <h3 class="explore-topic">Learn code</h3>
+                                <p class="explore-text">Learn all about code and become in a developer</p>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-
     </section>
+    <section class="popular-courses">
+        <div class="container">
+            <div class="courses-wrapper">
+                <h3>Popular courses</h3>
+                <div class="swiper courseSwiper">
+                <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="label">Label</div>
+                            <div class="cardcontent">
+                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <h4>Frontend Development with JavaScript</h4>
+                                <p class="author">By Cristian Muñoz</p>
+                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                                <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                            </div>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <div class="label">Label</div>
+                            <div class="cardcontent">
+                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <h4>Frontend Development with JavaScript</h4>
+                                <p class="author">By Cristian Muñoz</p>
+                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                                <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="label">Label</div>
+                            <div class="cardcontent">
+                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <h4>Frontend Development with JavaScript</h4>
+                                <p class="author">By Cristian Muñoz</p>
+                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                                <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="label">Label</div>
+                            <div class="cardcontent">
+                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <h4>Frontend Development with JavaScript</h4>
+                                <p class="author">By Cristian Muñoz</p>
+                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                                <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice"> $14.00 USD</span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="label">Label</div>
+                            <div class="cardcontent">
+                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <h4>Frontend Development with JavaScript</h4>
+                                <p class="author">By Cristian Muñoz</p>
+                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                                <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice"> $14.00 USD</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="course-cards">
+                    <div class="course-card">
+                        <div class="label">Label</div>
+                        <div class="cardcontent">
+                            <img src="assets/images/course-bg.png" alt="">
+                            <h4>Frontend Development with JavaScript</h4>
+                            <p class="author">By Cristian Muñoz</p>
+                            <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
+                            <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                            <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="label">Label</div>
+                        <div class="cardcontent">
+                            <img src="assets/images/course-bg.png" alt="">
+                            <h4>Frontend Development with JavaScript</h4>
+                            <p class="author">By Cristian Muñoz</p>
+                            <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
+                            <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                            <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="label">Label</div>
+                        <div class="cardcontent">
+                            <img src="assets/images/course-bg.png" alt="">
+                            <h4>Frontend Development with JavaScript</h4>
+                            <p class="author">By Cristian Muñoz</p>
+                            <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span>7 weeks</span></p>
+                            <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                            <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="label">Label</div>
+                        <div class="cardcontent">
+                            <img src="assets/images/course-bg.png" alt="">
+                            <h4>Frontend Development with JavaScript</h4>
+                            <p class="author">By Cristian Muñoz</p>
+                            <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span time>7 weeks</span></p>
+                            <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
+                            <a href="javascript:void(0)" class="buybtn">Buy now <span class="discountprice"> $14.00 USD</span></a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="recommendation">
+        <div class="recommendation-wrapper">
+            <img src="assets/images/gradient.png" alt="" width="1726px" height="600px">
+            <div class="recommendtext">
+                <h2>Emily Rolando</h2>
+                <p>I recently started learning to code with Tian and it's been a game-changer. The lessons are clear and engaging, perfect for beginners like me. I've already built my first app thanks to their hands-on approach. Highly recommend Tian for anyone starting their coding journey!</p>
+            </div>
+        </div>
+    </section>
+    <section class="explore">
+        <div class="container">
+            <div class="explore2wrapper">
+                <div class="explore">
+                    <img src="assets/images/computer.png" alt="">
+                    <div class="explore2text">
+                        <h3>Explore topics</h3>
+                        <p>Dive deep into our diverse catalog featuring a curated selection of courses in the realms of arts and writing. Experience knowledge crafted by experts, designed to inspire and nurture your creative journey.</p>
+                    </div>
+                </div>
+                <div class="explore">
+                    <img src="assets/images/friends.png" alt="">
+                    <div class="explore2text">
+                        <h3>Meet new Friends</h3>
+                        <p>Connect with our expansive network, match with like-minded peers, and learn code together</p>
+                    </div>
+                </div>
+                <div class="explore">
+                    <img src="assets/images/find.png" alt="">
+                    <div class="explore2text">
+                        <h3>Find</h3>
+                        <p>Connect with people around the world in a huge community with million of students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+            <div class="footer-wrapper">
+                <div class="logosocials">
+                    <img class="footer-logo" src="assets/images/footerlogo.png" alt="">
+                    <div class="socials">
+                        <img src="assets/images/Instagram .png" alt="">
+                        <img src="assets/images/Figma .png" alt="">
+                        <img src="assets/images/LinkedIn .png" alt="">
+                        <img src="assets/images/Twitter .png" alt="">
+                        <img src="assets/images/Telegram .png" alt="">
+                        <img src="assets/images/Medium.png" alt="">
+                    </div>
+                </div>
+                <div class="services">
+                    <div class="footerlinks products">
+                        <h4 class="product">Products</h4>
+                        <div class="footerlink productlinks">
+                            <p> Courses</p>
+                            <p>Development</p>
+                        </div>
+                    </div>
+                    <div class="footerlinks resources">
+                        <h4 class="resource">Resources</h4>
+                        <div class="footerlink resourcelinks">
+                            <p> Careers</p>
+                            <p>Blog</p>
+                        </div>
+                    </div>
+                    <div class="footerlinks companies">
+                        <h4 class="company">Company</h4>
+                        <div class="footerlink companylinks">
+                            <p> QnA</p>
+                            <p>Terms and conditions</p>
+                            <p>Privacy policy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/javascript/project.js"></script>
+    
+    
 </body> 
