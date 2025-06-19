@@ -1,6 +1,6 @@
 const menu = document.querySelector('.menu');
 const offScreenMenu = document.querySelector('.off-screen-menu');
-const hiddenlinks=document.querySelector('ul');
+const hiddenlinks=document.querySelectorAll('.list');
 
         menu.addEventListener('click', () => {
             offScreenMenu.classList.toggle('active');
@@ -11,8 +11,10 @@ const hiddenlinks=document.querySelector('ul');
                 offScreenMenu.classList.remove('active');
             }
         }
-        hiddenlinks.addEventListener("click", function (){
-            offScreenMenu.classList.toggle('active');
+        hiddenlinks.forEach((list) => {
+            list.addEventListener('click', () => {
+                offScreenMenu.classList.toggle('active');
+            });
         });
 
         checkWidthAndRemoveClass();
@@ -21,19 +23,20 @@ const hiddenlinks=document.querySelector('ul');
         
 
 
-const darkmode=document.querySelector('.lightdark');
-darkmode.addEventListener('click', () => {
-    darkmode.classList.toggle('active');
+const darkmode = document.querySelectorAll('.lightdark');
+const body = document.querySelector('body');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    body.classList.add('dark');
+}
+
+darkmode.forEach(button => {
+    button.addEventListener('click', (event) => {
+        body.classList.toggle('dark');
+        const isDark = body.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
 });
-
-
-
-
-
-
-
-
-
 
 
 let swiper = null;
@@ -47,10 +50,12 @@ function handleResponsiveSwiper() {
       swiper = null;
     }
     const swiperWrapper = document.querySelector('.swiper-wrapper');
+    const swiperslider=document.querySelector('.swiper-slide');
     if (swiperWrapper) {
       swiperWrapper.style.display = 'flex';
       swiperWrapper.style.flexDirection = 'column';
       swiperWrapper.style.alignItems = 'center';
+      swiperslider.style.width = '354.5';
     }
   } else {
     if (!swiper) {
@@ -82,38 +87,17 @@ function handleResponsiveSwiper() {
 window.addEventListener("resize", handleResponsiveSwiper);
 handleResponsiveSwiper();
 
-//   const screenWidth = window.innerWidth;
 
-//   if (screenWidth < 768) {
-//     if (swiper) {
-//       swiper.destroy(true, true);
-//       swiper = null;
-//     }
-//     document.querySelector('.swiper-wrapper').classList.remove('swiper-wrapper'); // Ensure flexbox works
-//   } else {
-//     if (!swiper) {
-//       swiper = new Swiper('.swiper', {
-//         spaceBetween: 24,
-//         breakpoints: {
-//           1024: {
-//             slidesPerView: 4,
-//           },
-//           768 : {
-//             slidesPerView: 2,
-//             loop : true,
-//             centeredSlides : true
-//           }
-//         },
-//       });
-//     } else {
-//       swiper.params.slidesPerView = screenWidth >= 1024 ? 4 : 2; 
-//       swiper.update(); 
-//     }
-//   }
-// }
+window.addEventListener('scroll', function(){
+  if(window.scrollY >= 80){
 
-// handleResponsiveSwiper();
+  }
+})
 
-// window.addEventListener('resize', handleResponsiveSwiper);
-
-
+function scroll(){
+  window.scroll({
+    top : 0,
+    left : 0,
+    behavior : 'smooth'
+  })
+}
