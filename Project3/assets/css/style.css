@@ -293,8 +293,8 @@ ul li a:hover::after{
 
 .travel{
     display: flex;
-    display: flex;
-    width: auto;
+    width: 184px;
+    height: 52px;
     padding: 14px 32px;
     justify-content: center;
     align-items: center;
@@ -330,9 +330,32 @@ ul li a:hover::after{
     font-weight: 600;
     line-height: 100%; /* 16px */
     letter-spacing: 0.32px;
+    width: 184px;
+    height: 52px;
 }
 .watchvideo img{
     margin-left: 8px;
+}
+
+.watchvideo p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-heading{
+        font-size: 38px;
+    }
+    .hero-text{
+        font-size: 20px;
+    }
+    .travel{
+        height: 56px;
+    }
+    .watchvideo{
+        height: 56px;
+    }
 }
 
 /* Explore Card section--------------------------------------------------------- */
@@ -407,6 +430,9 @@ ul li a:hover::after{
     }
     .explore-desc{
         width: 279px;
+    }
+    .explore-wrapper{
+        padding-top: 142px;
     }
 }
 /* Course Cards -----------------------------------------------*/
@@ -617,7 +643,7 @@ a.buybtn:hover{
 /* Recommendation section--------------------------------------- */
 
 .recommendation-wrapper{
-    padding-top: 128px;
+    margin-top: 128px;
     display: flex;
     justify-content: center;
     margin-bottom: 160px;
@@ -706,6 +732,8 @@ a.buybtn:hover{
     width: 100%;
 }
 
+
+
 .explore2text{
     padding: 12px 97px 0px 97px;
 }
@@ -730,7 +758,7 @@ a.buybtn:hover{
 @media screen and (max-width: 1240px) {
     .explore{
         flex-direction: column;
-        padding-bottom: 150px;
+        padding-bottom: 128px;
     }
     .explore2text{
         text-align: center;
@@ -857,6 +885,6 @@ footer{
         display: none;
     }
     footer{
-        padding: 100px 15px;
+        padding: 100px 15px 54px 15px;
     }
 }
