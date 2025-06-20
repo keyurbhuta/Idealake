@@ -27,11 +27,15 @@ body.dark .menu svg path{
 }
 
 body.dark .off-screen-menu{
-    background: var(--darkmode-primarybutton);
+    background: var(--text-white);
 }
 
 body.dark .off-screen-menu a{
     color: var(--primary-color);
+}
+
+body.dark .off-screen-menu a::after{
+    background: var(--primary-color);
 }
 
 body.dark .label{
@@ -39,12 +43,20 @@ body.dark .label{
     color: var(--darkmode-btntext);
 }
 
-body.dark .btn.lightdark{
+body.dark .ham-menu span{
+    background-color: white;
+}
+
+body.dark .ham-menu.active span{
+    background-color: #262626;
+}
+
+body.dark .lightdark{
     background: #262626;
     border: 1px solid #737373;
 }
 
-body.dark .btn.lightdark img{
+body.dark .lightdark img{
     color: white;
 }
 
@@ -79,7 +91,7 @@ body.dark .contactus{
     color: var(--darkmode-btntext);
 }
 
-body.dark header{
+body.dark header.show{
     background: var(--secondary-text);
 }
 
@@ -102,6 +114,10 @@ body.dark .watchvideo svg path{
 
 /* hover */
 
-body.dark .watchvideo:hover{
-    background: #171717;
+body.dark #button{
+    background-color: var(--darkmode-primarybutton);
+}
+
+body.dark .footerlinks a span::after{
+    background-color: var(--darkmode-primarybutton);
 }

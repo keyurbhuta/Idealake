@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="assets/css/fonts.css" rel="stylesheet">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/styledark.css" rel="stylesheet">
     
 </head>
 <body>
-    <a class="scrollup" href="javascript:void(0)">
-        <i class='bx bx-chevron-up' style='color:#8b5cf6'></i>
-    </a>
+    <button id="button"><i class='bx bx-chevron-up'></i></button>
     <section class="image-section">
-        <!-- <img class="background" src="assets/images/hero-background.png" alt=""> -->
+        <img class="background" src="assets/images/hero-background.png" alt="">
         <div class="container">
             <div class="absolute-section">
                 <header>
@@ -37,8 +37,8 @@
                             <a class="about" href="#">About us</a>
                             <a class="courses" href="#">Courses</a>
                             <a class=faq href="#">FAQ</a>
-                            <a class="contactus" href="#">Contact Us</a>
-                            <button class="btn lightdark" type="button">
+                            <a class="btn contactus" href="#">Contact Us</a>
+                            <button class="lightdark" type="button">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19Z" fill="#171717"/>
                                     <path d="M12 22.96C11.45 22.96 11 22.55 11 22V21.92C11 21.37 11.45 20.92 12 20.92C12.55 20.92 13 21.37 13 21.92C13 22.47 12.55 22.96 12 22.96ZM19.14 20.14C18.88 20.14 18.63 20.04 18.43 19.85L18.3 19.72C17.91 19.33 17.91 18.7 18.3 18.31C18.69 17.92 19.32 17.92 19.71 18.31L19.84 18.44C20.23 18.83 20.23 19.46 19.84 19.85C19.65 20.04 19.4 20.14 19.14 20.14ZM4.86 20.14C4.6 20.14 4.35 20.04 4.15 19.85C3.76 19.46 3.76 18.83 4.15 18.44L4.28 18.31C4.67 17.92 5.3 17.92 5.69 18.31C6.08 18.7 6.08 19.33 5.69 19.72L5.56 19.85C5.37 20.04 5.11 20.14 4.86 20.14ZM22 13H21.92C21.37 13 20.92 12.55 20.92 12C20.92 11.45 21.37 11 21.92 11C22.47 11 22.96 11.45 22.96 12C22.96 12.55 22.55 13 22 13ZM2.08 13H2C1.45 13 1 12.55 1 12C1 11.45 1.45 11 2 11C2.55 11 3.04 11.45 3.04 12C3.04 12.55 2.63 13 2.08 13ZM19.01 5.99C18.75 5.99 18.5 5.89 18.3 5.7C17.91 5.31 17.91 4.68 18.3 4.29L18.43 4.16C18.82 3.77 19.45 3.77 19.84 4.16C20.23 4.55 20.23 5.18 19.84 5.57L19.71 5.7C19.52 5.89 19.27 5.99 19.01 5.99ZM4.99 5.99C4.73 5.99 4.48 5.89 4.28 5.7L4.15 5.56C3.76 5.17 3.76 4.54 4.15 4.15C4.54 3.76 5.17 3.76 5.56 4.15L5.69 4.28C6.08 4.67 6.08 5.3 5.69 5.69C5.5 5.89 5.24 5.99 4.99 5.99ZM12 3.04C11.45 3.04 11 2.63 11 2.08V2C11 1.45 11.45 1 12 1C12.55 1 13 1.45 13 2C13 2.55 12.55 3.04 12 3.04Z" fill="#171717"/>
@@ -53,7 +53,7 @@
                                 <li class="list"><a href="#">Courses</a></li>
                                 <li class="list"><a href="#">FAQ</a></li>
                                 <li class="list"><a href="#">Contact us</a></li>
-                                <button class="btn lightdark" type="button">
+                                <button class="lightdark" type="button">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19Z" fill="#171717"/>
                                         <path d="M12 22.96C11.45 22.96 11 22.55 11 22V21.92C11 21.37 11.45 20.92 12 20.92C12.55 20.92 13 21.37 13 21.92C13 22.47 12.55 22.96 12 22.96ZM19.14 20.14C18.88 20.14 18.63 20.04 18.43 19.85L18.3 19.72C17.91 19.33 17.91 18.7 18.3 18.31C18.69 17.92 19.32 17.92 19.71 18.31L19.84 18.44C20.23 18.83 20.23 19.46 19.84 19.85C19.65 20.04 19.4 20.14 19.14 20.14ZM4.86 20.14C4.6 20.14 4.35 20.04 4.15 19.85C3.76 19.46 3.76 18.83 4.15 18.44L4.28 18.31C4.67 17.92 5.3 17.92 5.69 18.31C6.08 18.7 6.08 19.33 5.69 19.72L5.56 19.85C5.37 20.04 5.11 20.14 4.86 20.14ZM22 13H21.92C21.37 13 20.92 12.55 20.92 12C20.92 11.45 21.37 11 21.92 11C22.47 11 22.96 11.45 22.96 12C22.96 12.55 22.55 13 22 13ZM2.08 13H2C1.45 13 1 12.55 1 12C1 11.45 1.45 11 2 11C2.55 11 3.04 11.45 3.04 12C3.04 12.55 2.63 13 2.08 13ZM19.01 5.99C18.75 5.99 18.5 5.89 18.3 5.7C17.91 5.31 17.91 4.68 18.3 4.29L18.43 4.16C18.82 3.77 19.45 3.77 19.84 4.16C20.23 4.55 20.23 5.18 19.84 5.57L19.71 5.7C19.52 5.89 19.27 5.99 19.01 5.99ZM4.99 5.99C4.73 5.99 4.48 5.89 4.28 5.7L4.15 5.56C3.76 5.17 3.76 4.54 4.15 4.15C4.54 3.76 5.17 3.76 5.56 4.15L5.69 4.28C6.08 4.67 6.08 5.3 5.69 5.69C5.5 5.89 5.24 5.99 4.99 5.99ZM12 3.04C11.45 3.04 11 2.63 11 2.08V2C11 1.45 11.45 1 12 1C12.55 1 13 1.45 13 2C13 2.55 12.55 3.04 12 3.04Z" fill="#171717"/>
@@ -61,15 +61,13 @@
                                 </button>
                             </ul>
                         </div>
-                        <div class="menu">
-                            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.5 5.5H24.5" stroke="#171717" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.4517 11.3333H24.5001" stroke="#171717" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M3.5 17.1667H24.5" stroke="#171717" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M13.4517 23H24.5001" stroke="#171717" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-
-                        </div>
+                        <nav class="hamburger">
+                            <div class="ham-menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </nav>
                     </nav>
                 </header>
                 <section class="hero-section">
@@ -77,22 +75,22 @@
                         <h1 class="hero-heading">Where the joy of learn meets the power of community</h1>
                         <p class="hero-text">Dive deep in immersive, interactive small groups. Expand horizons, engage in discussions, and elevate your learning journey with us.</p>
                         <a class="btn travel"href="javascript:void(0)">Start your travel</a>
-                        <a href="javascript:void(0)" class="watchvideo"><p>Watch video <i class='bx bx-right-arrow-alt' ></i>
+                        <a href="javascript:void(0)" class="watchvideo"><p>Watch video <i class="fa-solid fa-arrow-right" style="color: #8b6cf6;"></i>
                         </p></a>
                     </div>
                 </section>
                 <section class="explore-cards">
-                    <div class="explore-wrapper">
-                        <div class="explore-card">
+                    <div class="explore-wrapper" data-aos="fade-up">
+                        <div class="explore-card" >
                             <div class="explore-icon">
-                                <img src="assets/images/clipboard.png" alt="">
+                                <img src="assets/images/clipboard.webp" alt="">
                             </div>
                             <div class="explore-desc">
                                 <h3 class="explore-topic">Explore topics</h3>
                                 <p class="explore-text">Explore our selection of courses in development</p>
                             </div>
                         </div>
-                        <div class="explore-card">
+                        <div class="explore-card" >
                             <div class="explore-icon">
                                 <img src="assets/images/people.png" alt="">
                             </div>
@@ -117,19 +115,19 @@
     </section>
     <section class="popular-courses">
         <div class="container">
-            <div class="courses-wrapper">
+            <div class="courses-wrapper" data-aos="fade-up">
                 <h3>Popular courses</h3>
                 <div class="swiper courseSwiper">
                 <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper courseWrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
                             <div class="label">Label</div>
                             <div class="cardcontent">
-                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <img class="course-bg" src="assets/images/course-bg.webp" alt="">
                                 <h4>Frontend Development with JavaScript</h4>
                                 <p class="author">By Cristian Muñoz</p>
-                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p class="duration"><img class="hourglass" src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
                                 <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
                                 <a href="javascript:void(0)" class="btn buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
                             </div>
@@ -138,10 +136,10 @@
                         <div class="swiper-slide">
                             <div class="label">Label</div>
                             <div class="cardcontent">
-                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <img class="course-bg" src="assets/images/course-bg.webp" alt="">
                                 <h4>Frontend Development with JavaScript</h4>
                                 <p class="author">By Cristian Muñoz</p>
-                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p class="duration"><img class="hourglass" src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
                                 <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
                                 <a href="javascript:void(0)" class="btn buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
                             </div>
@@ -149,10 +147,10 @@
                         <div class="swiper-slide">
                             <div class="label">Label</div>
                             <div class="cardcontent">
-                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <img class="course-bg" src="assets/images/course-bg.webp" alt="">
                                 <h4>Frontend Development with JavaScript</h4>
                                 <p class="author">By Cristian Muñoz</p>
-                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p class="duration"><img class="hourglass" src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
                                 <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
                                 <a href="javascript:void(0)" class="btn buybtn">Buy now <span class="discountprice">$14.00 USD</span></a>
                             </div>
@@ -160,10 +158,10 @@
                         <div class="swiper-slide">
                             <div class="label">Label</div>
                             <div class="cardcontent">
-                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <img class="course-bg" src="assets/images/course-bg.webp" alt="">
                                 <h4>Frontend Development with JavaScript</h4>
                                 <p class="author">By Cristian Muñoz</p>
-                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p class="duration"><img class="hourglass" src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
                                 <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
                                 <a href="javascript:void(0)" class="btn buybtn">Buy now <span class="discountprice"> $14.00 USD</span></a>
                             </div>
@@ -171,10 +169,10 @@
                         <div class="swiper-slide">
                             <div class="label">Label</div>
                             <div class="cardcontent">
-                                <img class="course-bg" src="assets/images/course-bg.png" alt="">
+                                <img class="course-bg" src="assets/images/course-bg.webp" alt="">
                                 <h4>Frontend Development with JavaScript</h4>
                                 <p class="author">By Cristian Muñoz</p>
-                                <p class="duration"><img src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
+                                <p class="duration"><img class="hourglass" src="assets/images/timer.png" alt="">Duration: <span class="time">7 weeks</span></p>
                                 <p><span class="price">$80.00 USD</span><span class="discount">80% discount</span></p>
                                 <a href="javascript:void(0)" class="btn buybtn">Buy now <span class="discountprice"> $14.00 USD</span></a>
                             </div>
@@ -230,9 +228,9 @@
             </div>
         </div>
     </section>
-    <section class="recommendation">
+    <section class="recommendation" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
         <div class="recommendation-wrapper">
-            <img src="assets/images/gradient.png" alt="" width="1726px" height="600px">
+            <img src="assets/images/gradient.webp" alt="" width="1726px" height="600px">
             <div class="recommendtext">
                 <h2>Emily Rolando</h2>
                 <p class="recommend">I recently started learning to code with Tian and it's been a game-changer. The lessons are clear and engaging, perfect for beginners like me. I've already built my first app thanks to their hands-on approach. Highly recommend Tian for anyone starting their coding journey!</p>
@@ -242,22 +240,22 @@
     <section class="explore-section">
         <div class="container">
             <div class="explore2wrapper">
-                <div class="explore">
-                    <img src="assets/images/computer.png" alt="">
+                <div class="explore" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <img src="assets/images/computer.webp" alt="">
                     <div class="explore2text">
                         <h3>Explore topics</h3>
                         <p>Dive deep into our diverse catalog featuring a curated selection of courses in the realms of arts and writing. Experience knowledge crafted by experts, designed to inspire and nurture your creative journey.</p>
                     </div>
                 </div>
-                <div class="explore">
-                    <img src="assets/images/friends.png" alt="">
+                <div class="explore" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <img src="assets/images/friends.webp" alt="">
                     <div class="explore2text">
                         <h3>Meet new Friends</h3>
                         <p>Connect with our expansive network, match with like-minded peers, and learn code together</p>
                     </div>
                 </div>
-                <div class="explore">
-                    <img src="assets/images/find.png" alt="">
+                <div class="explore" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <img src="assets/images/find.webp" alt="">
                     <div class="explore2text">
                         <h3>Find</h3>
                         <p>Connect with people around the world in a huge community with million of students</p>
@@ -267,7 +265,7 @@
         </div>
     </section>
     <footer>
-            <div class="footer-wrapper">
+            <div class="footer-wrapper" data-aos="fade-up">
                 <div class="logosocials">
                     <a href="javascript:void(0)"><svg class="footer-logo" width="118" height="44" viewBox="0 0 118 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M32.7842 19.124C32.1736 19.7384 31.706 20.4798 31.4147 21.2953C31.1235 22.111 31.0157 22.9809 31.099 23.843L31.07 23.814C31.1557 24.8288 31.0187 25.85 30.669 26.8065C30.3192 27.7628 29.765 28.6314 29.045 29.3515C28.3248 30.0715 27.4562 30.6259 26.4997 30.9755C25.5434 31.3253 24.5221 31.4623 23.5074 31.3765L23.5364 31.4055C22.3226 31.2926 21.1035 31.5567 20.0451 32.162C18.987 32.7673 18.1411 33.6841 17.6231 34.7878C17.1052 35.8914 16.94 37.1277 17.1504 38.3287C17.361 39.5294 17.9367 40.6361 18.7991 41.4977C19.6615 42.3593 20.7687 42.934 21.9696 43.1433C23.1707 43.3527 24.4069 43.1865 25.51 42.6675C26.6131 42.1484 27.5292 41.302 28.1336 40.2431C28.7379 39.1843 29.001 37.965 28.8869 36.7512L28.9175 36.7802C28.8318 35.7655 28.9686 34.7443 29.3184 33.7877C29.6681 32.8314 30.2225 31.9628 30.9425 31.2427C31.6627 30.5227 32.5312 29.9683 33.4876 29.6187C34.4441 29.2689 35.4652 29.1319 36.4801 29.2177L36.4495 29.1887C37.4409 29.2778 38.439 29.1152 39.3511 28.716C40.263 28.3167 41.0595 27.6937 41.6666 26.9047C42.2736 26.1158 42.6719 25.1862 42.824 24.2024C42.9762 23.2185 42.8776 22.2122 42.5374 21.2765C42.1971 20.3409 41.6261 19.5064 40.8774 18.8502C40.1288 18.194 39.2265 17.7374 38.2544 17.5228C37.2822 17.3082 36.2716 17.3423 35.3162 17.6222C34.3608 17.9022 33.4916 18.4187 32.789 19.124H32.7842Z" fill="#262626"/>
@@ -364,6 +362,10 @@
                 </div>
             </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/javascript/project.js"></script>
     
