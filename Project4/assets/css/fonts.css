@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'nova-black';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBlackRegular.svg#FONTSPRINGDEMO-ProximaNovaBlackRegular') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-semibold';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaSemiboldRegular.svg#FONTSPRINGDEMO-ProximaNovaSemiboldRegular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-medium';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaMediumRegular.svg#FONTSPRINGDEMO-ProximaNovaMediumRegular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-light';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaLightRegular.svg#FONTSPRINGDEMO-ProximaNovaLightRegular') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-bold';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaBold.svg#FONTSPRINGDEMO-ProximaNovaBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-regular';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaRegular.svg#FONTSPRINGDEMO-ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'nova-extrabold';
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.eot');
+    src: url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.woff2') format('woff2'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.woff') format('woff'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.ttf') format('truetype'),
+        url('../fonts/FONTSPRINGDEMO-ProximaNovaExtraboldRegular.svg#FONTSPRINGDEMO-ProximaNovaExtraboldRegular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

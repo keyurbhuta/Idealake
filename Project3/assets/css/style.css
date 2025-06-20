@@ -132,6 +132,7 @@ header.show{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0px 8rem 0px 8rem;
 }
 
 .navbar a{
@@ -298,7 +299,7 @@ ul li a:hover::after{
     display: flex;
     align-items: flex-end;
     position: absolute;
-    right: 0;
+    right: 30px;
     cursor: pointer;
     /* margin-top: 2.0625rem; 33px */
     z-index: 3;
